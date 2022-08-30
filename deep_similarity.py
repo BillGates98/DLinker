@@ -58,18 +58,39 @@ class DeepSimilarity:
         # print(value1,' >>>>>>>>>>>>>>>>>>> ', value2, ' ################# ', common_string)
         _first_common_percent = len(common_string)/len(value1);
         _second_common_percent = len(common_string)/len(value2);
-        mean_score = (_first_common_percent + _second_common_percent ) / 2
-        if value1 == value2 :
-            decision = True
-        else:
+        if len(value1) > 1 and len(value2) > 1 :
             _nfirst_part = value1.replace(common_string, '')
             _nsecond_part = value2.replace(common_string, '')
             common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
             if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
                 decision = False
             else:
-                if mean_score >= 0.88 :
+                mean_score = (_first_common_percent + _second_common_percent ) / 2
+                if mean_score >= 0.88 : # 0.88
                     decision = True
+        # if decision : 
+        #     print(value1, ' # ', value2, ' = score > ', mean_score, ' <<<>>> ', decision )
+        return decision
+
+    def measure1_(self, value1='', value2=''):
+        decision = False
+        common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
+        # print(value1,' >>>>>>>>>>>>>>>>>>> ', value2, ' ################# ', common_string)
+        _first_common_percent = len(common_string)/len(value1);
+        _second_common_percent = len(common_string)/len(value2);
+        mean_score = (_first_common_percent + _second_common_percent ) / 2
+        if len(value1) > 1 and len(value2) > 1 :
+            _nfirst_part = value1.replace(common_string, '')
+            _nsecond_part = value2.replace(common_string, '')
+            common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
+            if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
+                decision = False
+            else:
+                if len(common_string2) > 0 :
+                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part)
+                else:
+                    if mean_score >= 0.88 : # 0.88
+                        decision = True
         # if decision : 
         #     print(value1, ' # ', value2, ' = score > ', mean_score, ' <<<>>> ', decision )
         return decision
@@ -117,6 +138,6 @@ class DeepSimilarity:
         #     # print('comparison of uri')
         # else:
             # print('comparison of simple string')
-        output = self.measure1(value1=_first_value, value2=_second_value) # and self.measure2(value1=_first_value, value2=_second_value)
+        output = self.measure1_(value1=_first_value, value2=_second_value) # and self.measure2(value1=_first_value, value2=_second_value)
         return output
 
