@@ -124,7 +124,7 @@ class DeepSimilarity:
             decision = True
         return decision
 
-    def comparison_run(self, first='', second='', alpha=0):
+    def comparison_run(self, first='', second='', alpha=0, measure='low'):
         _first_value = StringUtils().get_uri_last_part(value = first)
         _second_value = StringUtils().get_uri_last_part(value = second)
         # if validators.url(first) and validators.url(second):
@@ -132,6 +132,10 @@ class DeepSimilarity:
         #     # print('comparison of uri')
         # else:
             # print('comparison of simple string')
-        output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
+        if measure == 'low' :
+            output = self.measure1(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
+        else:
+            if measure == 'depth':
+                output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
         return output
 
