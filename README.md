@@ -11,6 +11,11 @@ DLinker is an RDF data linking tool.
 - acceptance threshold for similar literals 'alpha'
 - number of accepted similarity pairs 'phi'
 
+## Evaluations 
+- Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
+    * Precision : 0.96
+    * Recall : 1
+    * F-measure : 0.98
 ## Features
 
 - Take only pairs of files in the inputs path('./inputs/') with the names 'source.ttl' and 'target.ttl'
