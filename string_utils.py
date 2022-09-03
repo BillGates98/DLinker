@@ -23,9 +23,12 @@ class StringUtils:
         return _value.lower()
     
     def get_uri_last_part(self, value=''):
+        output = value
+        if len(value) > 0 :
+            output = ' '.join(value.lower().split())
         # if validators.url(value) :
         #     return value.rsplit('/', 1)[-1]
-        return value.lower()
+        return output.lstrip()
 
     def longest_substring_finder(self, string1='', string2=''):
         answer = ""

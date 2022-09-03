@@ -1,7 +1,3 @@
-
-
-
-
 import chunk
 from compute_files import ComputeFile
 from deep_similarity import DeepSimilarity
