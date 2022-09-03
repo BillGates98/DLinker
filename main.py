@@ -32,6 +32,9 @@ if __name__ == '__main__' :
     def arg_manager():
         parser = argparse.ArgumentParser()
         parser.add_argument("--alpha_predicate", type=float, default=1)
+        parser.add_argument("--alpha", type=float, default=0.88)
+        parser.add_argument("--phi", type=int, default=2)
+        parser.add_argument("--measure_level", type=int, default=1)
         return parser.parse_args()
     args = arg_manager()
     Main(input_path='./inputs/', output_path='./outputs/', alpha_predicate=args.alpha_predicate).run()

@@ -24,7 +24,7 @@ scriptLocale=locale.setlocale(category=locale.LC_ALL, locale="en_GB.UTF-8")
 
 class CandidateEntityPairs:
     
-    def __init__(self, input_path='', output_path='', similar_predicates_path='', alpha=0, phi=0, measure='low'):
+    def __init__(self, input_path='', output_path='', similar_predicates_path='', alpha=0, phi=0, level=1):
         log.info("Candidates Entities Pairs started ")
         self.predicates_pairs = self.read_similar_predicates(file_name=similar_predicates_path)
         self.input_path = input_path
@@ -36,7 +36,7 @@ class CandidateEntityPairs:
         self.local_time = datetime.now(tz.gettz())
         self.alpha = alpha
         self.phi = phi
-        self.measure = measure
+        self.level = level
         print('----------- ', self.local_time, ' -----------')
         log.info('###   Predicates similarities started    ###')
     
@@ -89,7 +89,7 @@ class CandidateEntityPairs:
             compare = DeepSimilarity(code='*')
             fs, fo = first_so
             ss, so = second_so
-            if compare.comparison_run(first=fo, second=so, alpha=self.alpha, measure=self.measure) and self.can_save_pair(key=(fs + ss)) :
+            if compare.comparison_run(first=fo, second=so, alpha=self.alpha, level=self.level) and self.can_save_pair(key=(fs + ss)) :
                 good_entities_pairs.append((fs, ss, fo, so, 1))
                 graph = self.insert_to_graph(graph=graph, fsubject=fs, ssubject=ss)
         return [graph, good_entities_pairs, bad_entities_pairs]
@@ -138,7 +138,7 @@ if __name__ == '__main__' :
         parser.add_argument("--alpha_predicate", type=float, default=1)
         parser.add_argument("--alpha", type=float, default=0.88)
         parser.add_argument("--phi", type=int, default=2)
-        parser.add_argument("--measure", type=str, default='low')
+        parser.add_argument("--measure_level", type=int, default=1)
         return parser.parse_args()
     args = arg_manager()
-    CandidateEntityPairs(input_path='./inputs/', output_path='./outputs/', similar_predicates_path='./outputs/similars_predicates.csv', alpha=args.alpha, phi=args.phi, measure=args.measure).run()
+    CandidateEntityPairs(input_path='./inputs/', output_path='./outputs/', similar_predicates_path='./outputs/similars_predicates.csv', alpha=args.alpha, phi=args.phi, level=args.measure_level).run()

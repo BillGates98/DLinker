@@ -69,7 +69,7 @@ class DeepSimilarity:
                     decision = True
         return decision
 
-    def measure1_(self, value1='', value2='', alpha=0):
+    def measure1_(self, value1='', value2='', alpha=0, level=1):
         decision = False
         common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
         _first_common_percent = len(common_string)/len(value1);
@@ -82,11 +82,13 @@ class DeepSimilarity:
             if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
                 decision = False
             else:
-                if len(common_string2) > 0 :
-                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part, alpha=alpha)
+                if len(common_string2) > 0 and level > 0:
+                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part, alpha=alpha, level=level-1)
                 else:
                     if mean_score >= alpha : # 0.88
                         decision = True
+        if decision and mean_score >= alpha :
+            print('value 1 : ', value1, 'value 2 : ', value2, ' measure ==> ', mean_score)
         return decision
 
     def measure2(self, value1='', value2=''):
@@ -124,7 +126,7 @@ class DeepSimilarity:
             decision = True
         return decision
 
-    def comparison_run(self, first='', second='', alpha=0, measure='low'):
+    def comparison_run(self, first='', second='', alpha=0, level=1):
         _first_value = StringUtils().get_uri_last_part(value = first)
         _second_value = StringUtils().get_uri_last_part(value = second)
         # if validators.url(first) and validators.url(second):
@@ -132,10 +134,6 @@ class DeepSimilarity:
         #     # print('comparison of uri')
         # else:
             # print('comparison of simple string')
-        if measure == 'low' :
-            output = self.measure1(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
-        else:
-            if measure == 'depth':
-                output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
+        output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha, level=level) # and self.measure2(value1=_first_value, value2=_second_value)
         return output
 
