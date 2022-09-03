@@ -6,16 +6,17 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 DLinker is an RDF data linking tool.
-- Depend of three hyperparameters ( alpha_predicate, alpha  and phi)
+- Depend of four hyperparameters(measure_level, alpha_predicate, alpha  and phi)
+- the strength of the similarity search measure 'measure_level'
 - acceptance threshold for similar predicates 'alpha_predicate'
 - acceptance threshold for similar literals 'alpha'
 - number of accepted similarity pairs 'phi'
 
 ## Evaluations 
 - Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
-    * Precision : 0.96
+    * Precision : 0.965
     * Recall : 1
-    * F-measure : 0.98
+    * F-measure : 0.982
 ## Features
 
 - Take only pairs of files in the inputs path('./inputs/') with the names 'source.ttl' and 'target.ttl'
@@ -51,7 +52,7 @@ pip install spacy
 From a Shell Script file :
 
 ```sh
-sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2
+sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1
 ```
 
 ```sh
