@@ -10,11 +10,12 @@ import log
 nlp = spacy.load('en_core_web_md')
 
 class ComputeSimilarPredicate:
-    def __init__(self, predicates=[], graphs=None):
+    def __init__(self, predicates=[], graphs=None, alpha_predicate=1):
         self.predicates = predicates
         self.path_to_file = './outputs/outputs.json'
         self.graphs = graphs
         self.associated_predicates = {}
+        self.alpha_predicate = alpha_predicate
         log.info('Compute similars predicates')
     
     def get_initial_predicate_with_uri(self, value=''):
@@ -93,8 +94,8 @@ class ComputeSimilarPredicate:
         _nlp_first_value = nlp(_first_value)
         _nlp_second_value = nlp(_second_value)
         similarity_percent = _nlp_first_value.similarity(_nlp_second_value)
-        
-        if similarity_percent >= 1 : 
+        # print(first_value + ' => ' + second_value + '#= ' + str(similarity_percent))
+        if similarity_percent >= self.alpha_predicate : 
             decision = True
             log.info(first_value + ' => ' + second_value + '#= ' + str(similarity_percent))
         
@@ -121,12 +122,12 @@ class ComputeSimilarPredicate:
             for s_uri_predicate, second_value in second_predicates:
                 tmp_similarity, similarity_percent = self.compute_similar_values(first_value=first_value, second_value=second_value)
                 if tmp_similarity :
-                    print('>>>>>>>>>> ', f_uri_predicate, ' # ', s_uri_predicate, ' ==> ', tmp_similarity)
+                    # print('>>>>>>>>>> ', f_uri_predicate, ' # ', s_uri_predicate, ' ==> ', tmp_similarity)
                     fupredicates.append(f_uri_predicate)
                     fupredicates_v.append(first_value)
                     supredicates.append(s_uri_predicate)
                     supredicates_v.append(second_value)
-                    similarities.append(similarity_percent if similarity_percent < 1 else 1)
+                    similarities.append(similarity_percent)
                     #
         values['predicate_1'] = fupredicates
         values['value_1'] = fupredicates_v

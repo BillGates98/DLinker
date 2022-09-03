@@ -16,7 +16,7 @@ import time
 import hashlib
 from datetime import datetime
 from dateutil import tz
-
+import argparse
 import os
 import locale
 os.environ["PYTHONIOENCODING"] = "utf-8"
@@ -24,7 +24,7 @@ scriptLocale=locale.setlocale(category=locale.LC_ALL, locale="en_GB.UTF-8")
 
 class CandidateEntityPairs:
     
-    def __init__(self, input_path='', output_path='', similar_predicates_path=''):
+    def __init__(self, input_path='', output_path='', similar_predicates_path='', alpha=0, phi=0):
         log.info("Candidates Entities Pairs started ")
         self.predicates_pairs = self.read_similar_predicates(file_name=similar_predicates_path)
         self.input_path = input_path
@@ -34,17 +34,21 @@ class CandidateEntityPairs:
         self.limit = 10
         self.start_time = time.time()
         self.local_time = datetime.now(tz.gettz())
+        self.alpha = alpha
+        self.phi = phi
         print('----------- ', self.local_time, ' -----------')
         log.info('###   Predicates similarities started    ###')
     
     def can_save_pair(self, key=''):
         _key = base64.b64encode((key).encode('utf-8')).decode('utf-8')
+        if not _key in self.recapitulating:
+            self.recapitulating[_key] = 0
         if _key in self.recapitulating:
             self.recapitulating[_key] += 1
             stat = self.recapitulating[_key]
-            if stat >= 2 :
+            if stat >= self.phi :
                 return True
-        self.recapitulating[_key] = 1
+        # self.recapitulating[_key] = 1
         return False
     
     def get_entities(self, graph=None, predicate=''):
@@ -84,16 +88,9 @@ class CandidateEntityPairs:
             compare = DeepSimilarity(code='*')
             fs, fo = first_so
             ss, so = second_so
-            if compare.comparison_run(first=fo, second=so) and self.can_save_pair(key=(fs + ss)) :
+            if compare.comparison_run(first=fo, second=so, alpha=self.alpha) and self.can_save_pair(key=(fs + ss)) :
                 good_entities_pairs.append((fs, ss, fo, so, 1))
                 graph = self.insert_to_graph(graph=graph, fsubject=fs, ssubject=ss)
-            # else:
-            #     if compare.comparison_run(first=fo, second=so) and self.can_save_pair(key=(fs + ss)) :
-            #         good_entities_pairs.append((fs, ss, fo, so, 1))
-            #         graph = self.insert_to_graph(graph=graph, fsubject=fs, ssubject=ss)
-            #     else: 
-            #         bad_entities_pairs.append((fs, ss, fo, so, 0))
-            #         pass
         return [graph, good_entities_pairs, bad_entities_pairs]
     
     def process_by_pairs_predicates(self,row=[], graphs=[]):
@@ -133,4 +130,12 @@ class CandidateEntityPairs:
         self.local_time = datetime.now(tz.gettz())
         print('----------- END : ', self.local_time, ' -----------')
         print("--- %s seconds ---" % (time.time() - self.start_time))
-CandidateEntityPairs(input_path='./inputs/', output_path='./outputs/', similar_predicates_path='./outputs/similars_predicates.csv').run()
+
+if __name__ == '__main__' :
+    def arg_manager():
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--alpha", type=float, default=0.88)
+        parser.add_argument("--phi", type=int, default=2)
+        return parser.parse_args()
+    args = arg_manager()
+    CandidateEntityPairs(input_path='./inputs/', output_path='./outputs/', similar_predicates_path='./outputs/similars_predicates.csv', alpha=args.alpha, phi=args.phi).run()

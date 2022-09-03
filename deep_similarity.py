@@ -52,10 +52,9 @@ class DeepSimilarity:
         # printDistances(distances, len(token1), len(token2))
         return distances[len(token1)][len(token2)]
 
-    def measure1(self, value1='', value2=''):
+    def measure1(self, value1='', value2='', alpha=0):
         decision = False
         common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
-        # print(value1,' >>>>>>>>>>>>>>>>>>> ', value2, ' ################# ', common_string)
         _first_common_percent = len(common_string)/len(value1);
         _second_common_percent = len(common_string)/len(value2);
         if len(value1) > 1 and len(value2) > 1 :
@@ -66,16 +65,13 @@ class DeepSimilarity:
                 decision = False
             else:
                 mean_score = (_first_common_percent + _second_common_percent ) / 2
-                if mean_score >= 0.88 : # 0.88
+                if mean_score >= alpha : # 0.88
                     decision = True
-        # if decision : 
-        #     print(value1, ' # ', value2, ' = score > ', mean_score, ' <<<>>> ', decision )
         return decision
 
-    def measure1_(self, value1='', value2=''):
+    def measure1_(self, value1='', value2='', alpha=0):
         decision = False
         common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
-        # print(value1,' >>>>>>>>>>>>>>>>>>> ', value2, ' ################# ', common_string)
         _first_common_percent = len(common_string)/len(value1);
         _second_common_percent = len(common_string)/len(value2);
         mean_score = (_first_common_percent + _second_common_percent ) / 2
@@ -87,12 +83,10 @@ class DeepSimilarity:
                 decision = False
             else:
                 if len(common_string2) > 0 :
-                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part)
+                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part, alpha=alpha)
                 else:
-                    if mean_score >= 0.88 : # 0.88
+                    if mean_score >= alpha : # 0.88
                         decision = True
-        # if decision : 
-        #     print(value1, ' # ', value2, ' = score > ', mean_score, ' <<<>>> ', decision )
         return decision
 
     def measure2(self, value1='', value2=''):
@@ -130,7 +124,7 @@ class DeepSimilarity:
             decision = True
         return decision
 
-    def comparison_run(self, first='', second=''):
+    def comparison_run(self, first='', second='', alpha=0):
         _first_value = StringUtils().get_uri_last_part(value = first)
         _second_value = StringUtils().get_uri_last_part(value = second)
         # if validators.url(first) and validators.url(second):
@@ -138,6 +132,6 @@ class DeepSimilarity:
         #     # print('comparison of uri')
         # else:
             # print('comparison of simple string')
-        output = self.measure1_(value1=_first_value, value2=_second_value) # and self.measure2(value1=_first_value, value2=_second_value)
+        output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha) # and self.measure2(value1=_first_value, value2=_second_value)
         return output
 

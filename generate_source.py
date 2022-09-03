@@ -117,4 +117,4 @@ class GenerateSource:
         print("--- %s seconds ---" % (time.time() - start_time))
         print('Process ended !')
         
-GenerateSource(input_file='./outputs/agrold/valid_same_as.csv', path_destination='./outputs/agrold/valid_same_as.ttl', chunk_size=1000, must_augment=False).processing()
+GenerateSource(input_file='./agroLD/sameAs/valid_same_as.csv', path_destination='./agroLD/sameAs/valid_same_as.ttl', chunk_size=10000, must_augment=False).processing()
