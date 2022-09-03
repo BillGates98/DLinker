@@ -87,8 +87,8 @@ class DeepSimilarity:
                 else:
                     if mean_score >= alpha : # 0.88
                         decision = True
-        if decision and mean_score >= alpha :
-            print('value 1 : ', value1, 'value 2 : ', value2, ' measure ==> ', mean_score)
+        # if decision and mean_score >= alpha :
+        #     print('value 1 : ', value1, 'value 2 : ', value2, ' measure ==> ', mean_score)
         return decision
 
     def measure2(self, value1='', value2=''):
