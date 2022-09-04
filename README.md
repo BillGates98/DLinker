@@ -30,7 +30,7 @@ DLinker is an RDF data linking tool.
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
+DLinker is implemented with below elements to work properly :
 
 - [Python >=3.8] - Awesome Language who is an interpreted, multi-paradigm and multi-platform programming language.!
 - [Visual Studio Code Editor] - awesome text editor
