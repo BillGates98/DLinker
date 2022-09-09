@@ -11,20 +11,28 @@ DLinker is an RDF data linking tool.
 - acceptance threshold for similar predicates 'alpha_predicate'
 - acceptance threshold for similar literals 'alpha'
 - number of accepted similarity pairs 'phi'
+- shared frequency of commun sub-sequence 'shared_frequency'
+- put validation parameter after introduice the file ine validation path 'validation'
 
 ## Evaluations 
 - Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
+    * ``` sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1  ```
     * Precision : 0.965
-    * Recall : 1
-    * F-measure : 0.982
+    * Recall : 1.0
+    * F-measure : <b>0.982</b>
+- HOBBIT and SPATEN(https://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_HOBBIT_LinkDiscovery/Spatial/Spaten_LinesTOLines/CONTAINS/) :
+   * ``` sh ./job.sh --alpha_predicate 1 --alpha 0.44 --phi 1 --measure_level 1 --shared_frequency 3 ```
+   * Precision : 0.857
+   * Recall : 1.0
+   * F-measure : <b>0.923</b>
 ## Features
 
-- Take only pairs of files in the inputs path('./inputs/') with the names 'source.ttl' and 'target.ttl'
+- Take only pairs of files in the inputs path('./inputs/') with any names. Example : 'source.ttl' and 'target.ttl'
 - Compute pairs predicates
 - Compute similars literals
 - Once the data is in place the whole thing can be launched with the sbatch file('./job.sh') without forgot the hyperparameters
 - Place results in the output path('./outputs')
-- Place valid pairs in the file '/validations/valid_same_as.ttl'
+- Place valid pairs in the file '/validations/valid_same_as.ttl' and call in argument with 'validation'
 - Compute score similarity from this python script ('./score_computation.py')
 
 
@@ -52,7 +60,7 @@ pip install spacy
 From a Shell Script file :
 
 ```sh
-sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1
+sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --shared_frequency 3 
 ```
 
 ```sh
@@ -77,5 +85,5 @@ echo "All params : ". $params
 ## module load system/python/3.8.12
 python3.8 ./main.py $params
 python3.8 ./candidate_entities_pairs.py $params
-python3.8 ./score_computation.py ## can be commented
+python3.8 ./score_computation.py $params ## can be commented
 ```
