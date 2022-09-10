@@ -21,9 +21,9 @@ DLinker is an RDF data linking tool.
    * F-measure : <b>1.0</b>
 - Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
     * ``` sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 2 --validation ./validations/doremus/valid_same_as.ttl  ```
-    * Precision : 0.965(0.932)
+    * Precision : 0.932
     * Recall : 1.0
-    * F-measure : <b>0.982(</0.965)b>
+    * F-measure : <b>0.965</b>
 
 ## Features
 
