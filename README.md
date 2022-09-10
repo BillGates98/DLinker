@@ -15,16 +15,17 @@ DLinker is an RDF data linking tool.
 - put validation parameter after introduice the file ine validation path 'validation'
 
 ## Evaluations 
-- Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
-    * ``` sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1  ```
-    * Precision : 0.965
-    * Recall : 1.0
-    * F-measure : <b>0.982</b>
 - HOBBIT and SPATEN(https://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_HOBBIT_LinkDiscovery/Spatial/Spaten_LinesTOLines/CONTAINS/) :
-   * ``` sh ./job.sh --alpha_predicate 1 --alpha 0.44 --phi 1 --measure_level 1 --shared_frequency 3 ```
-   * Precision : 0.857
+   * ``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit/ --alpha_predicate 1 --alpha 0.44 --phi 1 --measure_level 1 --validation ./validations/spaten_hobbit/valid_same_as.nt```
+   * Precision : 1.0
    * Recall : 1.0
-   * F-measure : <b>0.923</b>
+   * F-measure : <b>1.0</b>
+- Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
+    * ``` sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 2 --validation ./validations/doremus/valid_same_as.ttl  ```
+    * Precision : 0.965(0.932)
+    * Recall : 1.0
+    * F-measure : <b>0.982(</0.965)b>
+
 ## Features
 
 - Take only pairs of files in the inputs path('./inputs/') with any names. Example : 'source.ttl' and 'target.ttl'
