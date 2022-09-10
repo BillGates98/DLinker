@@ -71,10 +71,10 @@ class DeepSimilarity:
 
     def measure1_(self, value1='', value2='', alpha=0, level=1):
         decision = False
-        common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
-        _first_common_percent = len(common_string)/len(value1);
-        _second_common_percent = len(common_string)/len(value2);
         if len(value1) > 1 and len(value2) > 1 :
+            common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
+            _first_common_percent = len(common_string)/len(value1);
+            _second_common_percent = len(common_string)/len(value2);
             _nfirst_part = value1.replace(common_string, '')
             _nsecond_part = value2.replace(common_string, '')
             common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
