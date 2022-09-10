@@ -24,7 +24,7 @@ done
 
 # echo "All params : ". $params
 
-## module load system/python/3.8.12
+module load system/python/3.8.12
 python3.8 ./main.py $params
 python3.8 ./candidate_entities_pairs.py $params 
 
