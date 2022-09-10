@@ -14,7 +14,7 @@ class ComputeFile:
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file)
+        graph.parse(input_file, format='trig')
         return graph
     
     def accept_extension(self, file='') :
