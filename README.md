@@ -15,7 +15,7 @@ DLinker is an RDF data linking tool.
 
 ## Evaluations 
 - HOBBIT and SPATEN(https://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_HOBBIT_LinkDiscovery/Spatial/Spaten_LinesTOLines/CONTAINS/) :
-   * ``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit/ --alpha_predicate 1 --alpha 0.44 --phi 1 --measure_level 1 --validation ./validations/spaten_hobbit/valid_same_as.nt```
+   * ``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit --alpha_predicate 1 --alpha 0.3 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.nt ```
    * Precision : 1.0
    * Recall : 1.0
    * F-measure : <b>1.0</b>
