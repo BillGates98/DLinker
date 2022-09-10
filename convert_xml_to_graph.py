@@ -120,9 +120,9 @@ class Convertor:
 if __name__ == '__main__':
     def arg_manager():
         parser = argparse.ArgumentParser()
-        parser.add_argument("--input_data", type=str, default='./conversions/data.xml')
+        parser.add_argument("--input_data", type=str, default='./conversions/doremus/data_doremus.xml')
         parser.add_argument("--input_path", type=str, default='./inputs/doremus/')
-        parser.add_argument("--output_path", type=str, default="./validations/spimbench/")
+        parser.add_argument("--output_path", type=str, default="./validations/doremus/adding/")
         return parser.parse_args()
     args = arg_manager()
     Convertor(input_path=args.input_path, input_file=args.input_data,

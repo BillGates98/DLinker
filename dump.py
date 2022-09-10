@@ -59,16 +59,21 @@ class dump:
 
     def write_to_csv_panda(self,file_name='', data={}):
         df = pd.DataFrame(data)
-        df.to_csv(file_name + '.csv', index=False)
+        df.to_csv(file_name + '.csv', index=False, header=True)
     
     def read_csv(self, file_name=''):
         df = pd.read_csv(file_name)
         return df
     
     def write_tuples_to_csv(self,file_name='', data=[], columns=[]):
-        df = pd.DataFrame(data,columns=columns)
-        df.to_csv(file_name + '.csv', index=False)
-
+        if len(data) > 0:
+            _data = {}
+            for i in range(len(columns)) :
+                _data[columns[i]] = []
+                for d in data:
+                    _data[columns[i]].append(d[i])
+            df = pd.DataFrame(_data)
+            df.to_csv(file_name + '.csv', mode='a', index=False, header=True)
 
     def dump_r(self, file_name = '', names=[], entries=[]):
         self.sheet = self.workbook.add_sheet('data')

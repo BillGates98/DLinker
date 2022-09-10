@@ -12,7 +12,7 @@ class Reformulation:
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file)
+        graph.parse(input_file, format='trig')
         return graph
     
     def write_to_file(self, file_path=None,values=[]):

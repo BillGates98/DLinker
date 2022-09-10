@@ -10,7 +10,9 @@
 
 #SBATCH --mail-type=ALL 
 
-> ./logs/running.log
+# > ./logs/running.log
+> ./outputs/logs/comparisons.txt
+> ./outputs/logs/links.txt
 
 i=1;
 params=``
@@ -20,11 +22,10 @@ do
     params=`echo $params $param`
 done
 
-echo "All params : ". $params
+# echo "All params : ". $params
 
 ## module load system/python/3.8.12
-# python3.8 ./main.py $params
+python3.8 ./main.py $params
 python3.8 ./candidate_entities_pairs.py $params 
-python3.8 ./score_computation.py $params
 
 ### sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --validation ./validations/doremus/valid_same_as.ttl
