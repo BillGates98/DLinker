@@ -39,7 +39,7 @@ class ScoreComputation:
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file)
+        graph.parse(input_file, format='trig')
         return graph
     
     def get_positive_links(self, graph=None):
@@ -143,7 +143,12 @@ if __name__ == '__main__' :
         parser.add_argument("--validation", type=str, default="./validations/doremus/valid_same_as.ttl")
         return parser.parse_args()
     args = arg_manager()
-    reformulation = Reformulation(input_file=args.validation).run()
+    valid = args.validation
+    
+    if args.validation.split('.')[-1] == 'ttl' :
+        valid = args.validation
+    else:
+        valid = Reformulation(input_file=args.validation).run()
     ScoreComputation(input_good_validation=args.output_path + 'good_to_validate.csv', 
-                input_same_as_file=reformulation, chunk_size=1000).run()
+                input_same_as_file=valid, chunk_size=1000).run()
     

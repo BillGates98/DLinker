@@ -56,9 +56,7 @@ class CandidateEntityPairs:
     def get_entities(self, graph=None, predicate=''):
         outputs = []
         query = """SELECT DISTINCT ?fsubject ?fobject
-                    WHERE {
-                    ?fsubject  :fpredicate  ?fobject .
-                    }
+                    WHERE {?fsubject  :fpredicate  ?fobject .}
                 """
         query = query.replace(':fpredicate', predicate)
         results = graph.query(query)
@@ -92,6 +90,8 @@ class CandidateEntityPairs:
             ss, so = second_so
             if compare.comparison_run(first=fo, second=so, alpha=self.alpha, level=self.level) and self.can_save_pair(key=(fs + ss)) :
                 good_entities_pairs.append((fs, ss, fo, so, 1))
+                message = '<' + fs + '>\t<http://www.w3.org/2002/07/owl#sameAs>\t<' + ss + '>\t.'
+                dump().write_to_txt(file_path='./outputs/logs/links.txt', values=[message])
                 graph = self.insert_to_graph(graph=graph, fsubject=fs, ssubject=ss)
         return [graph, good_entities_pairs, bad_entities_pairs]
     
@@ -111,24 +111,20 @@ class CandidateEntityPairs:
         _, _, graphs = ComputeFile(input_path=self.input_path, output_path=self.output_path).build_list_files()
         
         predicates = self.predicates_pairs
-        bad_entities_pairs = []
-        good_entities_pairs = []
         _graphs = Graph()
-        stop = 0
         pool = multiprocessing.Pool()
+        to_delete = [self.output_path + 'good_to_validate.csv', self.output_path + 'bad_to_validate.csv']
+        for file in to_delete:
+            if os.path.isfile(file) :
+                os.remove(file)
         # parallel computing
         result_async = [pool.apply_async(self.process_by_pairs_predicates, args =(row, graphs, )) for index, row in predicates.iterrows()]
         for result_entities_pairs in result_async :
             _res_graphs, _good_entities_pairs, _bad_entities_pairs = result_entities_pairs.get()
             _graphs = _graphs + _res_graphs
-            good_entities_pairs = good_entities_pairs + _good_entities_pairs
-            bad_entities_pairs = bad_entities_pairs + _bad_entities_pairs
-            # if stop == self.limit :
-            #     break
-            # stop += 1
+            dump().write_tuples_to_csv(file_name=self.output_path + 'good_to_validate', data=_good_entities_pairs, columns=['fsubject', 'ssubject', 'fobject', 'sobject', 'has_matched'])
+            dump().write_tuples_to_csv(file_name=self.output_path + 'bad_to_validate', data=_bad_entities_pairs, columns=['fsubject', 'ssubject', 'fobject', 'sobject', 'has_matched'])
         _graphs.serialize(destination=self.output_path + 'same_as_entities.ttl', format='turtle')
-        dump().write_tuples_to_csv(file_name=self.output_path + 'good_to_validate', data=good_entities_pairs, columns=['fsubject', 'ssubject', 'fobject', 'sobject', 'has_matched'])
-        dump().write_tuples_to_csv(file_name=self.output_path + 'bad_to_validate', data=bad_entities_pairs, columns=['fsubject', 'ssubject', 'fobject', 'sobject', 'has_matched'])
         print('Process ended')
         self.local_time = datetime.now(tz.gettz())
         print('----------- END : ', self.local_time, ' -----------')

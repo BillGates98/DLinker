@@ -4,9 +4,9 @@ from string_utils import StringUtils
 import log
 import validators
 import numpy
+from dump import dump
 
 # nlp = spacy.load('en_core_web_md')
-	
 
 class DeepSimilarity:
     
@@ -71,6 +71,7 @@ class DeepSimilarity:
 
     def measure1_(self, value1='', value2='', alpha=0, level=1):
         decision = False
+        mean_score = 0
         if len(value1) > 1 and len(value2) > 1 :
             common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
             _first_common_percent = len(common_string)/len(value1);
@@ -87,6 +88,9 @@ class DeepSimilarity:
                 else:
                     if (mean_score >= alpha) :
                         decision = True
+        if decision:
+            message = 'level : ' + str(level) + ' score : ' + str(mean_score) + ' value1 : ' + value1 + ' vs value2 : ' + value2
+            dump().write_to_txt(file_path='./outputs/logs/comparisons.txt', values=[message])
         return decision
 
     def measure2(self, value1='', value2=''):
