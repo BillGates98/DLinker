@@ -11,7 +11,6 @@ DLinker is an RDF data linking tool.
 - acceptance threshold for similar predicates 'alpha_predicate'
 - acceptance threshold for similar literals 'alpha'
 - number of accepted similarity pairs 'phi'
-- shared frequency of commun sub-sequence 'shared_frequency'
 - put validation parameter after introduice the file ine validation path 'validation'
 
 ## Evaluations 
