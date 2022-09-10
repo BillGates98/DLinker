@@ -1,0 +1,14 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.spaten.com/trace-data#402929> owl:sameAs <http://www.hobbit.e7dd07dff-791f-4611-af13-d2ab783b8880> .
+
+<http://www.spaten.com/trace-data#490030> owl:sameAs <http://www.hobbit.eb53c0825-2aec-42dc-9b72-6863a6144a25> .
+
+<http://www.spaten.com/trace-data#62051> owl:sameAs <http://www.hobbit.ee7b2a488-33cb-4792-8627-4961a7753583> .
+
+<http://www.spaten.com/trace-data#66404> owl:sameAs <http://www.hobbit.e85ce054c-ef5f-48a7-9c7a-782c7dc0a112> .
+
+<http://www.spaten.com/trace-data#837718> owl:sameAs <http://www.hobbit.ed9d09e70-5163-44b8-8157-c2baf9757176> .
+
+<http://www.spaten.com/trace-data#852717> owl:sameAs <http://www.hobbit.ee7eb613d-c9a8-4b1b-8dd9-dc6ce57c373b> .
+
