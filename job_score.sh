@@ -24,7 +24,7 @@ done
 
 # echo "All params : ". $params
 
-## module load system/python/3.8.12
+module load system/python/3.8.12
 python3.8 ./score_computation.py $params
 
 ### sh ./job_score.sh --input_path ./inputs/doremus/ --output ./outputs/doremus --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --validation ./validations/doremus/valid_same_as.ttl
