@@ -89,7 +89,7 @@ class ScoreComputation:
         # parallel computing
         recaps = self.recaps
         result_async = [pool.apply_async(self.treat_links, args =(chunked_data, graph, recaps, )) for chunked_data in pd.read_csv(input_file, 
-                                                header=0, 
+                                                header=None, names=['fsubject', 'ssubject', 'fobject', 'sobject', 'has_matched'],
                                                 chunksize=self.chunk_size)]
         for _result in result_async :
             _res = _result.get()

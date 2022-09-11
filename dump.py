@@ -73,7 +73,7 @@ class dump:
                 for d in data:
                     _data[columns[i]].append(d[i])
             df = pd.DataFrame(_data)
-            df.to_csv(file_name + '.csv', mode='a', index=False, header=True)
+            df.to_csv(file_name + '.csv', mode='a', index=False, header=False)
 
     def dump_r(self, file_name = '', names=[], entries=[]):
         self.sheet = self.workbook.add_sheet('data')
