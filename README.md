@@ -14,16 +14,26 @@ DLinker is an RDF data linking tool.
 - put validation parameter after introduice the file ine validation path 'validation'
 
 ## Evaluations 
-- HOBBIT and SPATEN(https://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_HOBBIT_LinkDiscovery/Spatial/Spaten_LinesTOLines/CONTAINS/) :
-   * ``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit --alpha_predicate 1 --alpha 0.3 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.nt ```
+- HOBBIT and SPATEN([url](https://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_HOBBIT_LinkDiscovery/Spatial/Spaten_LinesTOLines/CONTAINS/)) :
+   ``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit --alpha_predicate 1 --alpha 0.3 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.nt ```
    * Precision : 1.0
    * Recall : 1.0
    * F-measure : <b>1.0</b>
-- Doremus data(https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT) : 
-    * ``` sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 2 --validation ./validations/doremus/valid_same_as.ttl  ```
-    * Precision : 0.932
+- Doremus data ([url](https://github.com/DOREMUS-ANR/doremus-playground/tree/master/DHT)) : 
+    ``` sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 2 --validation ./validations/doremus/valid_same_as.ttl  ```
+    * Precision : 0.966
     * Recall : 1.0
-    * F-measure : <b>0.965</b>
+    * F-measure : <b>0.983</b>
+- SPIMBENCH data([url](http://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_IM_SPIMBENCH)) : 
+   ``` sh ./job.sh --input_path ./inputs/spimbench/ --output ./outputs/spimbench/ --alpha_predicate 1 --alpha 1 --phi 1 --measure_level 1 --validation ./validations/spimbench/valid_same_as.ttl  ```
+    * Precision : 0.786
+    * Recall : 1.0
+    * F-measure : <b>0.880</b>
+> Make sure you have this in the './outputs/spimbench/similars_predicates.csv' the content below :
+>
+> predicate_1,value_1,predicate_2,value_2,similarities <br/>
+> `<http://www.bbc.co.uk/ontologies/creativework/title>`,http://www.bbc.co.uk/ontologies/creativework/title,                                               `<http://www.bbc.co.uk/ontologies/creativework/title>`,http://www.bbc.co.uk/ontologies/creativework/title,1.0
+>  
 
 ## Features
 
