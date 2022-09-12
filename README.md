@@ -25,10 +25,15 @@ DLinker is an RDF data linking tool.
     * Recall : 1.0
     * F-measure : <b>0.983</b>
 - SPIMBENCH data([url](http://users.ics.forth.gr/~jsaveta/.index.php?dir=OAEI_IM_SPIMBENCH)) : 
-    ``` sh ./job.sh --input_path ./inputs/spimbench/ --output ./outputs/spimbench/ --alpha_predicate 1 --alpha 1 --phi 1 --measure_level 1 --validation ./validations/spimbench/valid_same_as.ttl  ```
+   ``` sh ./job.sh --input_path ./inputs/spimbench/ --output ./outputs/spimbench/ --alpha_predicate 1 --alpha 1 --phi 1 --measure_level 1 --validation ./validations/spimbench/valid_same_as.ttl  ```
     * Precision : 0.790
     * Recall : 1.0
     * F-measure : <b>0.883</b>
+> Make sure you have this in the './outputs/spimbench/similars_predicates.csv' the content below :
+>
+> predicate_1,value_1,predicate_2,value_2,similarities <br/>
+> `<http://www.bbc.co.uk/ontologies/creativework/title>`,http://www.bbc.co.uk/ontologies/creativework/title,                                               `<http://www.bbc.co.uk/ontologies/creativework/title>`,http://www.bbc.co.uk/ontologies/creativework/title,1.0
+>  
 
 ## Features
 
