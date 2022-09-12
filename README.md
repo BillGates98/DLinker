@@ -65,23 +65,24 @@ Install the dependencies and devDependencies and start the server.
 pip install spacy
 ```
 
-## Execution from the project base
-
-From a Shell Script file :
-
-```sh
-sh ./job.sh --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --shared_frequency 3 
-```
+## Script Shell
 
 ```sh
 #!/bin/bash
 
-#SBATCH --job-nam=Automatic-Linking
+#SBATCH --job-nam=Automatic-alignment
+
 #SBATCH -p highmemdell
+
 #SBATCH -c 25 
-#SBATCH --mail-user=`youremail@domain`
+
+#SBATCH --mail-user=billhappi@gmail.com
+
 #SBATCH --mail-type=ALL 
+
 > ./logs/running.log
+> ./outputs/logs/comparisons.txt
+> ./outputs/logs/links.txt
 
 i=1;
 params=``
@@ -90,10 +91,12 @@ do
     i=$((i + 1));
     params=`echo $params $param`
 done
-echo "All params : ". $params
 
-## module load system/python/3.8.12
-python3.8 ./main.py $params
+# echo "All params : ". $params
+
+module load system/python/3.8.12
+# python3.8 ./main.py $params
 python3.8 ./candidate_entities_pairs.py $params
-python3.8 ./score_computation.py $params ## can be commented
+python3.8 ./score_computation.py $params
+
 ```
