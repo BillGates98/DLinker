@@ -1,11 +1,2 @@
 predicate_1,value_1,predicate_2,value_2,similarities
-<http://www.bbc.co.uk/ontologies/creativework/shortTitle>,http://www.bbc.co.uk/ontologies/creativework/shortTitle,<http://www.bbc.co.uk/ontologies/creativework/shortTitle>,http://www.bbc.co.uk/ontologies/creativework/shortTitle,1.0
 <http://www.bbc.co.uk/ontologies/creativework/title>,http://www.bbc.co.uk/ontologies/creativework/title,<http://www.bbc.co.uk/ontologies/creativework/title>,http://www.bbc.co.uk/ontologies/creativework/title,1.0
-<http://www.bbc.co.uk/ontologies/creativework/dateModified>,http://www.bbc.co.uk/ontologies/creativework/dateModified,<http://www.bbc.co.uk/ontologies/creativework/dateModified>,http://www.bbc.co.uk/ontologies/creativework/dateModified,1.0
-<http://www.bbc.co.uk/ontologies/creativework/dateCreated>,http://www.bbc.co.uk/ontologies/creativework/dateCreated,<http://www.bbc.co.uk/ontologies/creativework/dateCreated>,http://www.bbc.co.uk/ontologies/creativework/dateCreated,1.0
-<http://xmlns.com/foaf/0.1/name>,name,<http://xmlns.com/foaf/0.1/name>,name,1.0
-<http://purl.org/dc/elements/1.1/description>,description,<http://purl.org/dc/elements/1.1/description>,description,1.0
-<http://www.bbc.co.uk/ontologies/creativework/description>,http://www.bbc.co.uk/ontologies/creativework/description,<http://www.bbc.co.uk/ontologies/creativework/description>,http://www.bbc.co.uk/ontologies/creativework/description,1.0
-<http://dbpedia.org/property/nickname>,http://dbpedia.org/property/nickname,<http://dbpedia.org/property/nickname>,http://dbpedia.org/property/nickname,1.0
-<http://xmlns.com/foaf/0.1/surname>,surname,<http://xmlns.com/foaf/0.1/surname>,surname,1.0
-

@@ -53,7 +53,7 @@ class ScoreComputation:
             self.recaps['positives'] = int(str(_count['fcount']))
         return 
     
-    def get_link(self, graph=None, _fsubject='', _ssubject='', has_matched=None, recaps={}, round=0):
+    def get_link(self, graph=None, _fsubject='', _ssubject='', has_matched=None, recaps={}):
         query = """SELECT (count(?fpredicate) as ?fcount)
                     WHERE {
                     <?fsubject>  ?fpredicate  <?fobject> .
@@ -69,8 +69,6 @@ class ScoreComputation:
             else:
                 key = str(has_matched) + '0'
             recaps[key] += 1
-            if fcount == 0 and round == 0:
-                return self.get_link(graph=graph, _fsubject=_ssubject, _ssubject=_fsubject, has_matched=has_matched, recaps=recaps, round=1)
         return recaps
     
     def treat_links(self, data=None, graph=None, recaps={}):
@@ -144,7 +142,6 @@ if __name__ == '__main__' :
         return parser.parse_args()
     args = arg_manager()
     valid = args.validation
-    
     if args.validation.split('.')[-1] == 'ttl' :
         valid = args.validation
     else:
