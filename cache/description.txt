@@ -1,0 +1,12 @@
+sh ./job.sh --input_path ./inputs/spimbench/ --output ./outputs/spimbench/ --alpha_predicate 1 --alpha 0.88 --phi 10 --measure_level 0 --validation ./validations/spimbench/valid_same_as.ttl
+
+
+sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit/ --alpha_predicate 1 --alpha 0.3 --phi 1 --measure_level 0  --validation ./validations/spaten_hobbit/valid_same_as.nt
+
+
+sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 0  --validation ./validations/doremus/valid_same_as.ttl
+
+
+-----------------------------------------------------------------------------
+
+sh ./job_score.sh --input_path ./inputs/spimbench/ --output ./outputs/spimbench/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 0 --validation ./validations/spimbench/valid_same_as.ttl

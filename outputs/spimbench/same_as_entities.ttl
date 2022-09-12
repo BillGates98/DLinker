@@ -1,0 +1,479 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.bbc.co.uk/things/10#id> owl:sameAs <http://www.bbc.co.uk/things/1777331463#id> .
+
+<http://www.bbc.co.uk/things/102#id> owl:sameAs <http://www.bbc.co.uk/things/427399490#id> .
+
+<http://www.bbc.co.uk/things/104#id> owl:sameAs <http://www.bbc.co.uk/things/1293190344#id> .
+
+<http://www.bbc.co.uk/things/107#id> owl:sameAs <http://www.bbc.co.uk/things/646629526#id> .
+
+<http://www.bbc.co.uk/things/110#id> owl:sameAs <http://www.bbc.co.uk/things/1857957555#id> .
+
+<http://www.bbc.co.uk/things/115#id> owl:sameAs <http://www.bbc.co.uk/things/2044088495#id> .
+
+<http://www.bbc.co.uk/things/124#id> owl:sameAs <http://www.bbc.co.uk/things/1262491647#id> .
+
+<http://www.bbc.co.uk/things/126#id> owl:sameAs <http://www.bbc.co.uk/things/33446195#id> .
+
+<http://www.bbc.co.uk/things/127#id> owl:sameAs <http://www.bbc.co.uk/things/553524636#id> .
+
+<http://www.bbc.co.uk/things/131#id> owl:sameAs <http://www.bbc.co.uk/things/1144072816#id> .
+
+<http://www.bbc.co.uk/things/132#id> owl:sameAs <http://www.bbc.co.uk/things/972557153#id> .
+
+<http://www.bbc.co.uk/things/134#id> owl:sameAs <http://www.bbc.co.uk/things/935241457#id> .
+
+<http://www.bbc.co.uk/things/136#id> owl:sameAs <http://www.bbc.co.uk/things/1691315922#id> .
+
+<http://www.bbc.co.uk/things/140#id> owl:sameAs <http://www.bbc.co.uk/things/1354330036#id> .
+
+<http://www.bbc.co.uk/things/143#id> owl:sameAs <http://www.bbc.co.uk/things/1893200369#id> .
+
+<http://www.bbc.co.uk/things/145#id> owl:sameAs <http://www.bbc.co.uk/things/2039336072#id> .
+
+<http://www.bbc.co.uk/things/146#id> owl:sameAs <http://www.bbc.co.uk/things/829602128#id> .
+
+<http://www.bbc.co.uk/things/150#id> owl:sameAs <http://www.bbc.co.uk/things/1343851075#id> .
+
+<http://www.bbc.co.uk/things/151#id> owl:sameAs <http://www.bbc.co.uk/things/1964844233#id> .
+
+<http://www.bbc.co.uk/things/154#id> owl:sameAs <http://www.bbc.co.uk/things/730074202#id> .
+
+<http://www.bbc.co.uk/things/158#id> owl:sameAs <http://www.bbc.co.uk/things/1151399101#id> .
+
+<http://www.bbc.co.uk/things/16#id> owl:sameAs <http://www.bbc.co.uk/things/1664700192#id> .
+
+<http://www.bbc.co.uk/things/161#id> owl:sameAs <http://www.bbc.co.uk/things/2081303218#id> .
+
+<http://www.bbc.co.uk/things/162#id> owl:sameAs <http://www.bbc.co.uk/things/1559505123#id> .
+
+<http://www.bbc.co.uk/things/166#id> owl:sameAs <http://www.bbc.co.uk/things/1911692728#id> .
+
+<http://www.bbc.co.uk/things/168#id> owl:sameAs <http://www.bbc.co.uk/things/1554178288#id> .
+
+<http://www.bbc.co.uk/things/170#id> owl:sameAs <http://www.bbc.co.uk/things/1940043068#id> .
+
+<http://www.bbc.co.uk/things/171#id> owl:sameAs <http://www.bbc.co.uk/things/1517830286#id> .
+
+<http://www.bbc.co.uk/things/172#id> owl:sameAs <http://www.bbc.co.uk/things/148505594#id> .
+
+<http://www.bbc.co.uk/things/174#id> owl:sameAs <http://www.bbc.co.uk/things/723766411#id> .
+
+<http://www.bbc.co.uk/things/175#id> owl:sameAs <http://www.bbc.co.uk/things/1609910302#id> .
+
+<http://www.bbc.co.uk/things/176#id> owl:sameAs <http://www.bbc.co.uk/things/1408003904#id> .
+
+<http://www.bbc.co.uk/things/18#id> owl:sameAs <http://www.bbc.co.uk/things/868681930#id> .
+
+<http://www.bbc.co.uk/things/181#id> owl:sameAs <http://www.bbc.co.uk/things/1934226035#id> .
+
+<http://www.bbc.co.uk/things/182#id> owl:sameAs <http://www.bbc.co.uk/things/1057418317#id> .
+
+<http://www.bbc.co.uk/things/184#id> owl:sameAs <http://www.bbc.co.uk/things/502838507#id> .
+
+<http://www.bbc.co.uk/things/185#id> owl:sameAs <http://www.bbc.co.uk/things/1455027853#id> .
+
+<http://www.bbc.co.uk/things/189#id> owl:sameAs <http://www.bbc.co.uk/things/1134914375#id> .
+
+<http://www.bbc.co.uk/things/191#id> owl:sameAs <http://www.bbc.co.uk/things/1357897600#id> .
+
+<http://www.bbc.co.uk/things/192#id> owl:sameAs <http://www.bbc.co.uk/things/1529312082#id> .
+
+<http://www.bbc.co.uk/things/194#id> owl:sameAs <http://www.bbc.co.uk/things/647760539#id> .
+
+<http://www.bbc.co.uk/things/200#id> owl:sameAs <http://www.bbc.co.uk/things/2109779712#id> .
+
+<http://www.bbc.co.uk/things/202#id> owl:sameAs <http://www.bbc.co.uk/things/815017456#id> .
+
+<http://www.bbc.co.uk/things/205#id> owl:sameAs <http://www.bbc.co.uk/things/711429267#id> .
+
+<http://www.bbc.co.uk/things/209#id> owl:sameAs <http://www.bbc.co.uk/things/978791842#id> .
+
+<http://www.bbc.co.uk/things/21#id> owl:sameAs <http://www.bbc.co.uk/things/1207102589#id> .
+
+<http://www.bbc.co.uk/things/210#id> owl:sameAs <http://www.bbc.co.uk/things/1884538851#id> .
+
+<http://www.bbc.co.uk/things/211#id> owl:sameAs <http://www.bbc.co.uk/things/245125157#id> .
+
+<http://www.bbc.co.uk/things/215#id> owl:sameAs <http://www.bbc.co.uk/things/889999785#id> .
+
+<http://www.bbc.co.uk/things/221#id> owl:sameAs <http://www.bbc.co.uk/things/965054833#id> .
+
+<http://www.bbc.co.uk/things/226#id> owl:sameAs <http://www.bbc.co.uk/things/1819853617#id> .
+
+<http://www.bbc.co.uk/things/230#id> owl:sameAs <http://www.bbc.co.uk/things/912502241#id> .
+
+<http://www.bbc.co.uk/things/232#id> owl:sameAs <http://www.bbc.co.uk/things/1314952292#id> .
+
+<http://www.bbc.co.uk/things/233#id> owl:sameAs <http://www.bbc.co.uk/things/1626958589#id> .
+
+<http://www.bbc.co.uk/things/237#id> owl:sameAs <http://www.bbc.co.uk/things/108167293#id> .
+
+<http://www.bbc.co.uk/things/238#id> owl:sameAs <http://www.bbc.co.uk/things/1685506356#id> .
+
+<http://www.bbc.co.uk/things/239#id> owl:sameAs <http://www.bbc.co.uk/things/1309226716#id> .
+
+<http://www.bbc.co.uk/things/240#id> owl:sameAs <http://www.bbc.co.uk/things/213291953#id> .
+
+<http://www.bbc.co.uk/things/241#id> owl:sameAs <http://www.bbc.co.uk/things/1594866341#id> .
+
+<http://www.bbc.co.uk/things/243#id> owl:sameAs <http://www.bbc.co.uk/things/1589694093#id> .
+
+<http://www.bbc.co.uk/things/244#id> owl:sameAs <http://www.bbc.co.uk/things/630697708#id> .
+
+<http://www.bbc.co.uk/things/245#id> owl:sameAs <http://www.bbc.co.uk/things/708136432#id> .
+
+<http://www.bbc.co.uk/things/246#id> owl:sameAs <http://www.bbc.co.uk/things/2119782319#id> .
+
+<http://www.bbc.co.uk/things/248#id> owl:sameAs <http://www.bbc.co.uk/things/18721083#id> .
+
+<http://www.bbc.co.uk/things/251#id> owl:sameAs <http://www.bbc.co.uk/things/1956934461#id> .
+
+<http://www.bbc.co.uk/things/252#id> owl:sameAs <http://www.bbc.co.uk/things/1722421471#id> .
+
+<http://www.bbc.co.uk/things/259#id> owl:sameAs <http://www.bbc.co.uk/things/991685745#id> .
+
+<http://www.bbc.co.uk/things/260#id> owl:sameAs <http://www.bbc.co.uk/things/1300105838#id> .
+
+<http://www.bbc.co.uk/things/261#id> owl:sameAs <http://www.bbc.co.uk/things/612624250#id> .
+
+<http://www.bbc.co.uk/things/262#id> owl:sameAs <http://www.bbc.co.uk/things/1011382123#id> .
+
+<http://www.bbc.co.uk/things/267#id> owl:sameAs <http://www.bbc.co.uk/things/1651572940#id> .
+
+<http://www.bbc.co.uk/things/270#id> owl:sameAs <http://www.bbc.co.uk/things/1801426047#id> .
+
+<http://www.bbc.co.uk/things/275#id> owl:sameAs <http://www.bbc.co.uk/things/193455393#id> .
+
+<http://www.bbc.co.uk/things/276#id> owl:sameAs <http://www.bbc.co.uk/things/340509033#id> .
+
+<http://www.bbc.co.uk/things/280#id> owl:sameAs <http://www.bbc.co.uk/things/1509699193#id> .
+
+<http://www.bbc.co.uk/things/281#id> owl:sameAs <http://www.bbc.co.uk/things/1449987567#id> .
+
+<http://www.bbc.co.uk/things/284#id> owl:sameAs <http://www.bbc.co.uk/things/576804256#id> .
+
+<http://www.bbc.co.uk/things/286#id> owl:sameAs <http://www.bbc.co.uk/things/504570662#id> .
+
+<http://www.bbc.co.uk/things/287#id> owl:sameAs <http://www.bbc.co.uk/things/347849047#id> .
+
+<http://www.bbc.co.uk/things/288#id> owl:sameAs <http://www.bbc.co.uk/things/1413307313#id> .
+
+<http://www.bbc.co.uk/things/29#id> owl:sameAs <http://www.bbc.co.uk/things/596163279#id> .
+
+<http://www.bbc.co.uk/things/293#id> owl:sameAs <http://www.bbc.co.uk/things/999390224#id> .
+
+<http://www.bbc.co.uk/things/295#id> owl:sameAs <http://www.bbc.co.uk/things/1882778486#id> .
+
+<http://www.bbc.co.uk/things/296#id> owl:sameAs <http://www.bbc.co.uk/things/1381209169#id> .
+
+<http://www.bbc.co.uk/things/3#id> owl:sameAs <http://www.bbc.co.uk/things/489430069#id> .
+
+<http://www.bbc.co.uk/things/302#id> owl:sameAs <http://www.bbc.co.uk/things/1461796761#id> .
+
+<http://www.bbc.co.uk/things/304#id> owl:sameAs <http://www.bbc.co.uk/things/970796982#id> .
+
+<http://www.bbc.co.uk/things/305#id> owl:sameAs <http://www.bbc.co.uk/things/1930728198#id> .
+
+<http://www.bbc.co.uk/things/308#id> owl:sameAs <http://www.bbc.co.uk/things/849899310#id> .
+
+<http://www.bbc.co.uk/things/309#id> owl:sameAs <http://www.bbc.co.uk/things/1951660880#id> .
+
+<http://www.bbc.co.uk/things/311#id> owl:sameAs <http://www.bbc.co.uk/things/710351092#id> .
+
+<http://www.bbc.co.uk/things/319#id> owl:sameAs <http://www.bbc.co.uk/things/403135733#id> .
+
+<http://www.bbc.co.uk/things/32#id> owl:sameAs <http://www.bbc.co.uk/things/1572924973#id> .
+
+<http://www.bbc.co.uk/things/320#id> owl:sameAs <http://www.bbc.co.uk/things/240515688#id> .
+
+<http://www.bbc.co.uk/things/322#id> owl:sameAs <http://www.bbc.co.uk/things/1629721753#id> .
+
+<http://www.bbc.co.uk/things/323#id> owl:sameAs <http://www.bbc.co.uk/things/636667599#id> .
+
+<http://www.bbc.co.uk/things/325#id> owl:sameAs <http://www.bbc.co.uk/things/1856471601#id> .
+
+<http://www.bbc.co.uk/things/326#id> owl:sameAs <http://www.bbc.co.uk/things/2136943003#id> .
+
+<http://www.bbc.co.uk/things/327#id> owl:sameAs <http://www.bbc.co.uk/things/2087427351#id> .
+
+<http://www.bbc.co.uk/things/329#id> owl:sameAs <http://www.bbc.co.uk/things/130143938#id> .
+
+<http://www.bbc.co.uk/things/332#id> owl:sameAs <http://www.bbc.co.uk/things/515796956#id> .
+
+<http://www.bbc.co.uk/things/334#id> owl:sameAs <http://www.bbc.co.uk/things/52643320#id> .
+
+<http://www.bbc.co.uk/things/336#id> owl:sameAs <http://www.bbc.co.uk/things/1608256653#id> .
+
+<http://www.bbc.co.uk/things/337#id> owl:sameAs <http://www.bbc.co.uk/things/1546173039#id> .
+
+<http://www.bbc.co.uk/things/341#id> owl:sameAs <http://www.bbc.co.uk/things/752528222#id> .
+
+<http://www.bbc.co.uk/things/35#id> owl:sameAs <http://www.bbc.co.uk/things/1301893163#id> .
+
+<http://www.bbc.co.uk/things/36#id> owl:sameAs <http://www.bbc.co.uk/things/1949877939#id> .
+
+<http://www.bbc.co.uk/things/38#id> owl:sameAs <http://www.bbc.co.uk/things/1762228019#id> .
+
+<http://www.bbc.co.uk/things/39#id> owl:sameAs <http://www.bbc.co.uk/things/1898102971#id> .
+
+<http://www.bbc.co.uk/things/40#id> owl:sameAs <http://www.bbc.co.uk/things/49658569#id> .
+
+<http://www.bbc.co.uk/things/45#id> owl:sameAs <http://www.bbc.co.uk/things/1660263447#id> .
+
+<http://www.bbc.co.uk/things/49#id> owl:sameAs <http://www.bbc.co.uk/things/1394898892#id> .
+
+<http://www.bbc.co.uk/things/5#id> owl:sameAs <http://www.bbc.co.uk/things/1089896651#id> .
+
+<http://www.bbc.co.uk/things/54#id> owl:sameAs <http://www.bbc.co.uk/things/1245866090#id> .
+
+<http://www.bbc.co.uk/things/6#id> owl:sameAs <http://www.bbc.co.uk/things/822880662#id> .
+
+<http://www.bbc.co.uk/things/61#id> owl:sameAs <http://www.bbc.co.uk/things/723685516#id> .
+
+<http://www.bbc.co.uk/things/62#id> owl:sameAs <http://www.bbc.co.uk/things/1335557724#id> .
+
+<http://www.bbc.co.uk/things/67#id> owl:sameAs <http://www.bbc.co.uk/things/358137536#id> .
+
+<http://www.bbc.co.uk/things/7#id> owl:sameAs <http://www.bbc.co.uk/things/10992588#id> .
+
+<http://www.bbc.co.uk/things/72#id> owl:sameAs <http://www.bbc.co.uk/things/8595673#id> .
+
+<http://www.bbc.co.uk/things/74#id> owl:sameAs <http://www.bbc.co.uk/things/1636544670#id> .
+
+<http://www.bbc.co.uk/things/75#id> owl:sameAs <http://www.bbc.co.uk/things/1632444534#id> .
+
+<http://www.bbc.co.uk/things/78#id> owl:sameAs <http://www.bbc.co.uk/things/342926944#id> .
+
+<http://www.bbc.co.uk/things/79#id> owl:sameAs <http://www.bbc.co.uk/things/327714140#id> .
+
+<http://www.bbc.co.uk/things/8#id> owl:sameAs <http://www.bbc.co.uk/things/1363318670#id> .
+
+<http://www.bbc.co.uk/things/80#id> owl:sameAs <http://www.bbc.co.uk/things/1718250304#id> .
+
+<http://www.bbc.co.uk/things/83#id> owl:sameAs <http://www.bbc.co.uk/things/1834436766#id> .
+
+<http://www.bbc.co.uk/things/85#id> owl:sameAs <http://www.bbc.co.uk/things/331264149#id> .
+
+<http://www.bbc.co.uk/things/86#id> owl:sameAs <http://www.bbc.co.uk/things/883640481#id> .
+
+<http://www.bbc.co.uk/things/88#id> owl:sameAs <http://www.bbc.co.uk/things/1745888146#id> .
+
+<http://www.bbc.co.uk/things/89#id> owl:sameAs <http://www.bbc.co.uk/things/262780813#id> .
+
+<http://www.bbc.co.uk/things/91#id> owl:sameAs <http://www.bbc.co.uk/things/1605592898#id> .
+
+<http://www.bbc.co.uk/things/92#id> owl:sameAs <http://www.bbc.co.uk/things/735640389#id> .
+
+<http://www.bbc.co.uk/things/95#id> owl:sameAs <http://www.bbc.co.uk/things/1704491719#id> .
+
+<http://www.bbc.co.uk/things/96#id> owl:sameAs <http://www.bbc.co.uk/things/1636791094#id> .
+
+<http://www.bbc.co.uk/things/97#id> owl:sameAs <http://www.bbc.co.uk/things/485246029#id> .
+
+<http://www.bbc.co.uk/things/101#id> owl:sameAs <http://www.bbc.co.uk/things/101#id> .
+
+<http://www.bbc.co.uk/things/103#id> owl:sameAs <http://www.bbc.co.uk/things/103#id> .
+
+<http://www.bbc.co.uk/things/106#id> owl:sameAs <http://www.bbc.co.uk/things/106#id> .
+
+<http://www.bbc.co.uk/things/112#id> owl:sameAs <http://www.bbc.co.uk/things/112#id> .
+
+<http://www.bbc.co.uk/things/113#id> owl:sameAs <http://www.bbc.co.uk/things/113#id> .
+
+<http://www.bbc.co.uk/things/114#id> owl:sameAs <http://www.bbc.co.uk/things/114#id> .
+
+<http://www.bbc.co.uk/things/116#id> owl:sameAs <http://www.bbc.co.uk/things/116#id> .
+
+<http://www.bbc.co.uk/things/118#id> owl:sameAs <http://www.bbc.co.uk/things/118#id> .
+
+<http://www.bbc.co.uk/things/12#id> owl:sameAs <http://www.bbc.co.uk/things/12#id> .
+
+<http://www.bbc.co.uk/things/120#id> owl:sameAs <http://www.bbc.co.uk/things/120#id> .
+
+<http://www.bbc.co.uk/things/123#id> owl:sameAs <http://www.bbc.co.uk/things/123#id> .
+
+<http://www.bbc.co.uk/things/125#id> owl:sameAs <http://www.bbc.co.uk/things/125#id> .
+
+<http://www.bbc.co.uk/things/129#id> owl:sameAs <http://www.bbc.co.uk/things/129#id> .
+
+<http://www.bbc.co.uk/things/13#id> owl:sameAs <http://www.bbc.co.uk/things/13#id> .
+
+<http://www.bbc.co.uk/things/137#id> owl:sameAs <http://www.bbc.co.uk/things/137#id> .
+
+<http://www.bbc.co.uk/things/139#id> owl:sameAs <http://www.bbc.co.uk/things/139#id> .
+
+<http://www.bbc.co.uk/things/141#id> owl:sameAs <http://www.bbc.co.uk/things/141#id> .
+
+<http://www.bbc.co.uk/things/142#id> owl:sameAs <http://www.bbc.co.uk/things/142#id> .
+
+<http://www.bbc.co.uk/things/15#id> owl:sameAs <http://www.bbc.co.uk/things/15#id> .
+
+<http://www.bbc.co.uk/things/155#id> owl:sameAs <http://www.bbc.co.uk/things/155#id> .
+
+<http://www.bbc.co.uk/things/156#id> owl:sameAs <http://www.bbc.co.uk/things/156#id> .
+
+<http://www.bbc.co.uk/things/157#id> owl:sameAs <http://www.bbc.co.uk/things/157#id> .
+
+<http://www.bbc.co.uk/things/160#id> owl:sameAs <http://www.bbc.co.uk/things/160#id> .
+
+<http://www.bbc.co.uk/things/164#id> owl:sameAs <http://www.bbc.co.uk/things/164#id> .
+
+<http://www.bbc.co.uk/things/173#id> owl:sameAs <http://www.bbc.co.uk/things/173#id> .
+
+<http://www.bbc.co.uk/things/177#id> owl:sameAs <http://www.bbc.co.uk/things/177#id> .
+
+<http://www.bbc.co.uk/things/179#id> owl:sameAs <http://www.bbc.co.uk/things/179#id> .
+
+<http://www.bbc.co.uk/things/186#id> owl:sameAs <http://www.bbc.co.uk/things/186#id> .
+
+<http://www.bbc.co.uk/things/193#id> owl:sameAs <http://www.bbc.co.uk/things/193#id> .
+
+<http://www.bbc.co.uk/things/196#id> owl:sameAs <http://www.bbc.co.uk/things/196#id> .
+
+<http://www.bbc.co.uk/things/198#id> owl:sameAs <http://www.bbc.co.uk/things/198#id> .
+
+<http://www.bbc.co.uk/things/199#id> owl:sameAs <http://www.bbc.co.uk/things/199#id> .
+
+<http://www.bbc.co.uk/things/206#id> owl:sameAs <http://www.bbc.co.uk/things/206#id> .
+
+<http://www.bbc.co.uk/things/207#id> owl:sameAs <http://www.bbc.co.uk/things/207#id> .
+
+<http://www.bbc.co.uk/things/212#id> owl:sameAs <http://www.bbc.co.uk/things/212#id> .
+
+<http://www.bbc.co.uk/things/214#id> owl:sameAs <http://www.bbc.co.uk/things/214#id> .
+
+<http://www.bbc.co.uk/things/217#id> owl:sameAs <http://www.bbc.co.uk/things/217#id> .
+
+<http://www.bbc.co.uk/things/219#id> owl:sameAs <http://www.bbc.co.uk/things/219#id> .
+
+<http://www.bbc.co.uk/things/22#id> owl:sameAs <http://www.bbc.co.uk/things/22#id> .
+
+<http://www.bbc.co.uk/things/220#id> owl:sameAs <http://www.bbc.co.uk/things/220#id> .
+
+<http://www.bbc.co.uk/things/223#id> owl:sameAs <http://www.bbc.co.uk/things/223#id> .
+
+<http://www.bbc.co.uk/things/225#id> owl:sameAs <http://www.bbc.co.uk/things/225#id> .
+
+<http://www.bbc.co.uk/things/227#id> owl:sameAs <http://www.bbc.co.uk/things/227#id> .
+
+<http://www.bbc.co.uk/things/229#id> owl:sameAs <http://www.bbc.co.uk/things/229#id> .
+
+<http://www.bbc.co.uk/things/23#id> owl:sameAs <http://www.bbc.co.uk/things/23#id> .
+
+<http://www.bbc.co.uk/things/236#id> owl:sameAs <http://www.bbc.co.uk/things/236#id> .
+
+<http://www.bbc.co.uk/things/24#id> owl:sameAs <http://www.bbc.co.uk/things/24#id> .
+
+<http://www.bbc.co.uk/things/25#id> owl:sameAs <http://www.bbc.co.uk/things/25#id> .
+
+<http://www.bbc.co.uk/things/253#id> owl:sameAs <http://www.bbc.co.uk/things/253#id> .
+
+<http://www.bbc.co.uk/things/254#id> owl:sameAs <http://www.bbc.co.uk/things/254#id> .
+
+<http://www.bbc.co.uk/things/256#id> owl:sameAs <http://www.bbc.co.uk/things/256#id> .
+
+<http://www.bbc.co.uk/things/258#id> owl:sameAs <http://www.bbc.co.uk/things/258#id> .
+
+<http://www.bbc.co.uk/things/263#id> owl:sameAs <http://www.bbc.co.uk/things/263#id> .
+
+<http://www.bbc.co.uk/things/265#id> owl:sameAs <http://www.bbc.co.uk/things/265#id> .
+
+<http://www.bbc.co.uk/things/266#id> owl:sameAs <http://www.bbc.co.uk/things/266#id> .
+
+<http://www.bbc.co.uk/things/269#id> owl:sameAs <http://www.bbc.co.uk/things/269#id> .
+
+<http://www.bbc.co.uk/things/274#id> owl:sameAs <http://www.bbc.co.uk/things/274#id> .
+
+<http://www.bbc.co.uk/things/278#id> owl:sameAs <http://www.bbc.co.uk/things/278#id> .
+
+<http://www.bbc.co.uk/things/282#id> owl:sameAs <http://www.bbc.co.uk/things/282#id> .
+
+<http://www.bbc.co.uk/things/294#id> owl:sameAs <http://www.bbc.co.uk/things/294#id> .
+
+<http://www.bbc.co.uk/things/297#id> owl:sameAs <http://www.bbc.co.uk/things/297#id> .
+
+<http://www.bbc.co.uk/things/300#id> owl:sameAs <http://www.bbc.co.uk/things/300#id> .
+
+<http://www.bbc.co.uk/things/301#id> owl:sameAs <http://www.bbc.co.uk/things/301#id> .
+
+<http://www.bbc.co.uk/things/303#id> owl:sameAs <http://www.bbc.co.uk/things/303#id> .
+
+<http://www.bbc.co.uk/things/307#id> owl:sameAs <http://www.bbc.co.uk/things/307#id> .
+
+<http://www.bbc.co.uk/things/313#id> owl:sameAs <http://www.bbc.co.uk/things/313#id> .
+
+<http://www.bbc.co.uk/things/314#id> owl:sameAs <http://www.bbc.co.uk/things/314#id> .
+
+<http://www.bbc.co.uk/things/315#id> owl:sameAs <http://www.bbc.co.uk/things/315#id> .
+
+<http://www.bbc.co.uk/things/317#id> owl:sameAs <http://www.bbc.co.uk/things/317#id> .
+
+<http://www.bbc.co.uk/things/321#id> owl:sameAs <http://www.bbc.co.uk/things/321#id> .
+
+<http://www.bbc.co.uk/things/324#id> owl:sameAs <http://www.bbc.co.uk/things/324#id> .
+
+<http://www.bbc.co.uk/things/328#id> owl:sameAs <http://www.bbc.co.uk/things/328#id> .
+
+<http://www.bbc.co.uk/things/331#id> owl:sameAs <http://www.bbc.co.uk/things/331#id> .
+
+<http://www.bbc.co.uk/things/338#id> owl:sameAs <http://www.bbc.co.uk/things/338#id> .
+
+<http://www.bbc.co.uk/things/339#id> owl:sameAs <http://www.bbc.co.uk/things/339#id> .
+
+<http://www.bbc.co.uk/things/34#id> owl:sameAs <http://www.bbc.co.uk/things/34#id> .
+
+<http://www.bbc.co.uk/things/347#id> owl:sameAs <http://www.bbc.co.uk/things/347#id> .
+
+<http://www.bbc.co.uk/things/349#id> owl:sameAs <http://www.bbc.co.uk/things/349#id> .
+
+<http://www.bbc.co.uk/things/37#id> owl:sameAs <http://www.bbc.co.uk/things/37#id> .
+
+<http://www.bbc.co.uk/things/4#id> owl:sameAs <http://www.bbc.co.uk/things/4#id> .
+
+<http://www.bbc.co.uk/things/42#id> owl:sameAs <http://www.bbc.co.uk/things/42#id> .
+
+<http://www.bbc.co.uk/things/43#id> owl:sameAs <http://www.bbc.co.uk/things/43#id> .
+
+<http://www.bbc.co.uk/things/44#id> owl:sameAs <http://www.bbc.co.uk/things/44#id> .
+
+<http://www.bbc.co.uk/things/46#id> owl:sameAs <http://www.bbc.co.uk/things/46#id> .
+
+<http://www.bbc.co.uk/things/48#id> owl:sameAs <http://www.bbc.co.uk/things/48#id> .
+
+<http://www.bbc.co.uk/things/51#id> owl:sameAs <http://www.bbc.co.uk/things/51#id> .
+
+<http://www.bbc.co.uk/things/52#id> owl:sameAs <http://www.bbc.co.uk/things/52#id> .
+
+<http://www.bbc.co.uk/things/53#id> owl:sameAs <http://www.bbc.co.uk/things/53#id> .
+
+<http://www.bbc.co.uk/things/58#id> owl:sameAs <http://www.bbc.co.uk/things/58#id> .
+
+<http://www.bbc.co.uk/things/59#id> owl:sameAs <http://www.bbc.co.uk/things/59#id> .
+
+<http://www.bbc.co.uk/things/63#id> owl:sameAs <http://www.bbc.co.uk/things/63#id> .
+
+<http://www.bbc.co.uk/things/65#id> owl:sameAs <http://www.bbc.co.uk/things/65#id> .
+
+<http://www.bbc.co.uk/things/70#id> owl:sameAs <http://www.bbc.co.uk/things/70#id> .
+
+<http://www.bbc.co.uk/things/71#id> owl:sameAs <http://www.bbc.co.uk/things/71#id>,
+        <http://www.bbc.co.uk/things/839839599#id> .
+
+<http://www.bbc.co.uk/things/73#id> owl:sameAs <http://www.bbc.co.uk/things/73#id> .
+
+<http://www.bbc.co.uk/things/77#id> owl:sameAs <http://www.bbc.co.uk/things/77#id> .
+
+<http://www.bbc.co.uk/things/84#id> owl:sameAs <http://www.bbc.co.uk/things/84#id> .
+
+<http://www.bbc.co.uk/things/87#id> owl:sameAs <http://www.bbc.co.uk/things/87#id> .
+
+<http://www.bbc.co.uk/things/9#id> owl:sameAs <http://www.bbc.co.uk/things/9#id> .
+
+<http://www.bbc.co.uk/things/90#id> owl:sameAs <http://www.bbc.co.uk/things/90#id> .
+
+<http://www.bbc.co.uk/things/93#id> owl:sameAs <http://www.bbc.co.uk/things/93#id> .
+
+<http://www.bbc.co.uk/things/94#id> owl:sameAs <http://www.bbc.co.uk/things/94#id> .
+

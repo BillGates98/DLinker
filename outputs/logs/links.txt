@@ -1,1 +1,0 @@
-<http://www.spaten.com/trace-data#872226>	<http://www.w3.org/2002/07/owl#sameAs>	<http://www.hobbit.ebe02f797-1af8-471c-a3e1-bb8d3445f6f8>	.
