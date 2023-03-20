@@ -65,24 +65,10 @@ Install the dependencies and devDependencies and start the server.
 pip install spacy
 ```
 
-## Script Shell
+## Script Shell contains inside ./job.sh file
 
 ```sh
 #!/bin/bash
-
-#SBATCH --job-nam=Automatic-alignment
-
-#SBATCH -p highmemdell
-
-#SBATCH -c 25 
-
-#SBATCH --mail-user=billhappi@gmail.com
-
-#SBATCH --mail-type=ALL 
-
-> ./logs/running.log
-> ./outputs/logs/comparisons.txt
-> ./outputs/logs/links.txt
 
 i=1;
 params=``
@@ -93,10 +79,28 @@ do
 done
 
 # echo "All params : ". $params
-
-module load system/python/3.8.12
-# python3.8 ./main.py $params
 python3.8 ./candidate_entities_pairs.py $params
 python3.8 ./score_computation.py $params
 
+```
+Expected Output after running on HOBBIT AND SPATEN datasets : 
+
+``` sh ./job.sh --input_path ./inputs/spaten_hobbit/ --output ./outputs/spaten_hobbit --alpha_predicate 1 --alpha 0.3 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.nt```
+
+```
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.spaten.com/trace-data#162531> owl:sameAs <http://www.hobbit.e79638702-1458-413d-a054-06ba82203597> .
+
+<http://www.spaten.com/trace-data#207815> owl:sameAs <http://www.hobbit.ea985b39b-df18-43d2-aac1-21e41e04c910> .
+
+<http://www.spaten.com/trace-data#21948> owl:sameAs <http://www.hobbit.ea0e27f34-3e0a-48ff-9a27-b4f3052187e4> .
+
+<http://www.spaten.com/trace-data#332418> owl:sameAs <http://www.hobbit.e6ec56f99-f954-431c-b644-49e3f52c4608> .
+
+<http://www.spaten.com/trace-data#402929> owl:sameAs <http://www.hobbit.e7dd07dff-791f-4611-af13-d2ab783b8880> .
+
+<http://www.spaten.com/trace-data#44152> owl:sameAs <http://www.hobbit.e0cadb061-dfc0-4992-b9ec-77b03e869c19> .
+
+...
 ```
