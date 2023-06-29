@@ -1,0 +1,14 @@
+- Dataset processing : spaten_hobbit will be processed ...0%
+./validations/spaten_hobbit/valid_same_as.ttl ./inputs/spaten_hobbit/source.nt ./inputs/spaten_hobbit/target.nt ./validations/spaten_hobbit/valid_same_as.ttl --- 59.931965589523315 seconds --- Process ended Global Predicates count : 1 Selected predicates count : 1 ++++++++++++++++++++++++++++++++++++ Command to process on real data # sh ./job.sh --input_source ./inputs/spaten_hobbit/sourcef --input_target ./inputs/spaten_hobbit/targetf --output ./outputs/spaten_hobbit/ --alpha_predicate 1.0 --alpha 0.958080772383294 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.ttl
+sh ./job.sh --input_source ./inputs/spaten_hobbit/source.nt --input_target ./inputs/spaten_hobbit/target.nt --output ./outputs/spaten_hobbit/ --alpha_predicate 1.0 --alpha 0.958080772383294 --phi 1 --measure_level 0 --validation ./validations/spaten_hobbit/valid_same_as.ttl
+-----------  2023-06-29 13:24:16.342277+02:00  -----------
+----------- END :  2023-06-29 13:24:17.040932+02:00  -----------
+--- 0.6988856792449951 seconds ---
+{'00': 0, '01': 0, '10': 1, '11': 0, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+------------------------
+Precision :  0
+Recall :  0
+Fmeasure :  0
+Process ended
+--- 0.6096305847167969 seconds ---
+File : spaten_hobbit will be processed ...100%

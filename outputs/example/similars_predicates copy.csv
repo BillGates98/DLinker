@@ -1,0 +1,7 @@
+predicate_1,value_1,predicate_2,value_2,similarities
+<http://erlangen-crm.org/current/P3_has_note>,http://erlangen-crm.org/current/P3_has_note,<http://data.doremus.org/ontology#U16_has_catalogue_statement>,http://data.doremus.org/ontology#U16_has_catalogue_statement,1.0
+<http://data.doremus.org/ontology#U17_has_opus_statement>, http://data.doremus.org/ontology#U17_has_opus_statement,<http://erlangen-crm.org/current/P102_has_title>,http://erlangen-crm.org/current/P102_has_title,1.0
+<http://erlangen-crm.org/current/P3_has_note>, http://erlangen-crm.org/current/P3_has_note, <http://erlangen-crm.org/current/P102_has_title>, http://erlangen-crm.org/current/P102_has_title, 1.0
+<http://data.doremus.org/ontology#U10_has_order_number>, http://data.doremus.org/ontology#U10_has_order_number, <http://erlangen-crm.org/current/P102_has_title>,http://erlangen-crm.org/current/P102_has_title,1.0
+<http://erlangen-crm.org/current/P102_has_title>, http://erlangen-crm.org/current/P102_has_title, <http://data.doremus.org/ontology#U17_has_opus_statement>, http://data.doremus.org/ontology#U17_has_opus_statement,1.0
+<http://data.doremus.org/ontology#U12_has_genre>, http://data.doremus.org/ontology#U12_has_genre, <http://erlangen-crm.org/current/P3_has_note>, http://erlangen-crm.org/current/P3_has_note,1.0

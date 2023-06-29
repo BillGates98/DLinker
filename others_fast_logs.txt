@@ -1,0 +1,76 @@
+- Dataset processing : doremus will be processed ...0%
+./validations/doremus/valid_same_as.ttl ./inputs/doremus/source.ttl ./inputs/doremus/target.ttl ./validations/doremus/valid_same_as.ttl --- 15.171909093856812 seconds --- Process ended Matrix handling Global Predicates count : 35 Selected predicates count : 4 ++++++++++++++++++++++++++++++++++++ Command to process on real data # sh ./job.sh --input_source ./inputs/doremus/sourcef --input_target ./inputs/doremus/targetf --output ./outputs/doremus/ --alpha_predicate 1.0 --alpha 0.2830544017677523 --phi 2 --measure_level 0 --validation ./validations/doremus/valid_same_as.ttl
+sh ./job.sh --input_source ./inputs/doremus/source.ttl --input_target ./inputs/doremus/target.ttl --output ./outputs/doremus/ --alpha_predicate 1.0 --alpha 0.2830544017677523 --phi 2 --measure_level 0 --validation ./validations/doremus/valid_same_as.ttl
+-----------  2023-04-21 23:37:12.318763+02:00  -----------
+----------- END :  2023-04-21 23:37:33.618560+02:00  -----------
+--- 21.30007529258728 seconds ---
+{'00': 0, '01': 0, '10': 18, '11': 28, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+{'00': 0, '01': 0, '10': 18, '11': 28, 'precision': 0.6086956521739131, 'recall': 1.0, 'fmeasure': 0.7567567567567568}
+------------------------
+Precision :  0.6086956521739131
+Recall :  1.0
+Fmeasure :  0.7567567567567568
+Process ended
+--- 0.985443115234375 seconds ---
+File : doremus will be processed ...100%
+
+- Dataset processing : SPIMBENCH_large-2016 will be processed ...0%
+sh ./job.sh --input_source ./inputs/SPIMBENCH_large-2016/Tbox1.nt --input_target ./inputs/SPIMBENCH_large-2016/Tbox2.nt --output ./outputs/SPIMBENCH_large-2016/ --alpha_predicate 1.0 --alpha 0.20201355311235325 --phi 1 --measure_level 0 --validation ./validations/SPIMBENCH_large-2016/valid_same_as.ttl
+-----------  2023-04-21 02:34:46.612185+02:00  -----------
+----------- END :  2023-04-21 04:31:52.899618+02:00  -----------
+--- 7026.2876670360565 seconds ---
+{'00': 0, '01': 0, '10': 1577, '11': 1401, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+{'00': 0, '01': 0, '10': 1577, '11': 1401, 'precision': 0.47044996642041637, 'recall': 1.0, 'fmeasure': 0.6398721169216716}
+------------------------
+Precision :  0.47044996642041637
+Recall :  1.0
+Fmeasure :  0.6398721169216716
+Process ended
+--- 12.056664228439331 seconds ---
+File : SPIMBENCH_large-2016 will be processed ...100%
+
+- Dataset processing : SPIMBENCH_small-2016 will be processed ...0%
+sh ./job.sh --input_source ./inputs/SPIMBENCH_small-2016/Tbox1.nt --input_target ./inputs/SPIMBENCH_small-2016/Tbox2.nt --output ./outputs/SPIMBENCH_small-2016/ --alpha_predicate 1.0 --alpha 0.6641684858862344 --phi 1 --measure_level 0 --validation ./validations/SPIMBENCH_small-2016/valid_same_as.ttl
+-----------  2023-04-21 04:32:37.678533+02:00  -----------
+----------- END :  2023-04-21 04:33:11.414990+02:00  -----------
+--- 33.7366840839386 seconds ---
+{'00': 0, '01': 0, '10': 51, '11': 229, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+{'00': 0, '01': 0, '10': 51, '11': 229, 'precision': 0.8178571428571428, 'recall': 1.0, 'fmeasure': 0.899803536345776}
+------------------------
+Precision :  0.8178571428571428
+Recall :  1.0
+Fmeasure :  0.899803536345776
+Process ended
+--- 1.7122642993927002 seconds ---
+File : SPIMBENCH_small-2016 will be processed ...100%
+
+- Dataset processing : SPIMBENCH_small-2019 will be processed ...0%
+sh ./job.sh --input_source ./inputs/SPIMBENCH_small-2019/Tbox1.nt --input_target ./inputs/SPIMBENCH_small-2019/Tbox2.nt --output ./outputs/SPIMBENCH_small-2019/ --alpha_predicate 1.0 --alpha 0.6641684858862347 --phi 1 --measure_level 0 --validation ./validations/SPIMBENCH_small-2019/valid_same_as.ttl
+-----------  2023-04-21 04:33:45.992138+02:00  -----------
+----------- END :  2023-04-21 04:34:18.968920+02:00  -----------
+--- 32.97701025009155 seconds ---
+{'00': 0, '01': 0, '10': 51, '11': 229, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+{'00': 0, '01': 0, '10': 51, '11': 229, 'precision': 0.8178571428571428, 'recall': 1.0, 'fmeasure': 0.899803536345776}
+------------------------
+Precision :  0.8178571428571428
+Recall :  1.0
+Fmeasure :  0.899803536345776
+Process ended
+--- 1.6844205856323242 seconds ---
+File : SPIMBENCH_small-2019 will be processed ...100%
+
+- Dataset processing : UOBM_small-2016 will be processed ...0%
+./validations/UOBM_small-2016/valid_same_as.ttl ./inputs/UOBM_small-2016/Tbox1.nt ./inputs/UOBM_small-2016/Tbox2.nt ./validations/UOBM_small-2016/valid_same_as.ttl --- 26.872615814208984 seconds --- Process ended Matrix handling Global Predicates count : 540 Selected predicates count : 6 ++++++++++++++++++++++++++++++++++++ Command to process on real data # sh ./job.sh --input_source ./inputs/UOBM_small-2016/sourcef --input_target ./inputs/UOBM_small-2016/targetf --output ./outputs/UOBM_small-2016/ --alpha_predicate 0.999890350877193 --alpha 0.6683858153791231 --phi 1 --measure_level 0 --validation ./validations/UOBM_small-2016/valid_same_as.ttl
+sh ./job.sh --input_source ./inputs/UOBM_small-2016/Tbox1.nt --input_target ./inputs/UOBM_small-2016/Tbox2.nt --output ./outputs/UOBM_small-2016/ --alpha_predicate 0.999890350877193 --alpha 0.6683858153791231 --phi 1 --measure_level 0 --validation ./validations/UOBM_small-2016/valid_same_as.ttl
+-----------  2023-04-23 16:25:52.271534+02:00  -----------
+----------- END :  2023-04-23 16:32:23.736727+02:00  -----------
+--- 391.4654357433319 seconds ---
+{'00': 0, '01': 0, '10': 189, '11': 528, 'precision': 0, 'recall': 0, 'fmeasure': 0}
+{'00': 0, '01': 0, '10': 189, '11': 528, 'precision': 0.7364016736401674, 'recall': 1.0, 'fmeasure': 0.8481927710843373}
+------------------------
+Precision :  0.7364016736401674
+Recall :  1.0
+Fmeasure :  0.8481927710843373
+Process ended
+--- 4.106923818588257 seconds ---
+File : UOBM_small-2016 will be processed ...100%

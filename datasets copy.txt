@@ -1,0 +1,6 @@
+doremus,source.ttl,target.ttl,valid_same_as.ttl
+spaten_hobbit,source.nt,target.nt,valid_same_as.ttl
+SPIMBENCH_large-2016,Tbox1.nt,Tbox2.nt,valid_same_as.ttl
+SPIMBENCH_small-2016,Tbox1.nt,Tbox2.nt,valid_same_as.ttl
+SPIMBENCH_small-2019,Tbox1.nt,Tbox2.nt,valid_same_as.ttl
+UOBM_small-2016,Tbox1.nt,Tbox2.nt,valid_same_as.ttl
