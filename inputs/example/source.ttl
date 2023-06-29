@@ -1,0 +1,11 @@
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mus:   <http://data.doremus.org/ontology#> .
+
+<http://data.doremus.org/expression/007834fc-3ebc-3f2d-a6f4-8a167d814e3d>
+        a                    efrbroo:F22_Self-Contained_Expression ;
+        ecrm:name  "Elon. M" ;
+        ecrm:email  "elon.musk@spacex.com" .
+

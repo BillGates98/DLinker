@@ -1,0 +1,4 @@
+predicate_1,value_1,predicate_2,value_2,similarities
+<http://erlangen-crm.org/current/email>,email,<http://erlangen-crm.org/current/email>,email,G
+<http://erlangen-crm.org/current/email>,email,<http://erlangen-crm.org/current/full_name>,full_name,G
+<http://erlangen-crm.org/current/name>,name,<http://erlangen-crm.org/current/full_name>,full_name,G
