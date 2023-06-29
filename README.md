@@ -10,7 +10,7 @@
 python(>=3.8) : [Download Python](https://www.python.org/)
 spacy(>=3.3.1) : [spacy on PyPI](https://pypi.org/project/spacy/)
 
-$ pip install -r requirements.txt
+$ pip install -r ./requirements.txt
 ```
 
 Note: If you encounter dependency errors, please add them using the following command:
@@ -32,7 +32,7 @@ Note:
 - 'target.(nt/ttl)' corresponds to the target file to be used in the 'spaten_hobbit' folder.
 - 'valid_same_as.ttl' corresponds to the ground truth file used to analyze evaluation scores.
 
-**3. Execution of evaluations:**
+**3. Launch evaluations :**
 
 The main file is `./job_evaluation.sh`, which generates the linking process command with associated hyperparameters for each dataset in `./datasets.txt`.
 
