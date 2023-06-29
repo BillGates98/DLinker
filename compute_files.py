@@ -2,6 +2,7 @@ import os
 import log
 from datetime import datetime
 from rdflib import Graph
+from get_format import get_format
 
 class ComputeFile: 
 
@@ -10,11 +11,11 @@ class ComputeFile:
         self.output_path = output_path
         self.input_files = []
         self.output_files = []
-        self.extensions = ['.ttl', '.nt']
+        self.extensions = ['.ttl', '.nt', '.rdf', '.owl']
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file, format='trig')
+        graph.parse(input_file, format=get_format(value=input_file))
         return graph
     
     def accept_extension(self, file='') :
@@ -60,3 +61,13 @@ class ComputeFile:
         print('Output Files')
         print(self.output_files)
         return self.input_files, self.output_files
+
+    def build_graph_from_files(self, source='', target=''):
+        """
+            building the list of input and output files
+        """
+        graphs = []
+        for file in [source, target]:
+            if self.accept_extension(file=file):
+                graphs.append(self.build_graph(input_file=file))
+        return graphs

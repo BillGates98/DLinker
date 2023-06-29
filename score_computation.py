@@ -1,6 +1,7 @@
 import chunk
 from compute_files import ComputeFile
 from deep_similarity import DeepSimilarity
+from get_format import get_format
 from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF
 from pyparsing import ParseException
@@ -39,7 +40,7 @@ class ScoreComputation:
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file, format='trig')
+        graph.parse(input_file, format=get_format(value=input_file))
         return graph
     
     def get_positive_links(self, graph=None):
@@ -56,11 +57,11 @@ class ScoreComputation:
     def get_link(self, graph=None, _fsubject='', _ssubject='', has_matched=None, recaps={}):
         query = """SELECT (count(?fpredicate) as ?fcount)
                     WHERE {
-                    <?fsubject>  ?fpredicate  <?fobject> .
+                    <?fsubject> ?fpredicate <?fobject>  .
                     }
                 """
         query = query.replace('?fsubject', _fsubject)
-        query = query.replace('?fobject', _ssubject)        
+        query = query.replace('?fobject', _ssubject)
         results = graph.query(query)
         for _count in results:
             fcount = int(str(_count['fcount'])) 
@@ -75,13 +76,24 @@ class ScoreComputation:
         for _, row in data.iterrows():
             fsubject = row['fsubject']
             ssubject = row['ssubject']
-            # fobject = row['fobject']
-            # sobject = row['sobject']
             has_matched = row['has_matched']
             recaps = self.get_link(graph=graph, _fsubject=fsubject, _ssubject=ssubject, has_matched=has_matched, recaps=recaps)
-            # recaps = self.get_link(graph=graph, _fsubject=ssubject, _ssubject=fsubject, has_matched=has_matched, recaps=recaps)
         return recaps
-                
+    
+    def new_treat_links(self, data=None, graph=None, recaps={}):
+        fsubject, ssubject = data
+        has_matched = 1
+        tmp_recaps = self.get_link(graph=graph, _fsubject=fsubject, _ssubject=ssubject, has_matched=has_matched, recaps=recaps)
+        return tmp_recaps
+    
+    def feedback(self, input_file='', graph=None):
+        _tmp_graph = self.build_graph(input_file=input_file)
+        tmp_recaps = self.recaps
+        for s, _, o in _tmp_graph:
+            tmp_recaps = self.new_treat_links(data=(s,o),graph=graph,recaps=tmp_recaps)
+        self._recapitulating(recaps=tmp_recaps)
+        return tmp_recaps
+            
     def chuncked_treatment(self, input_file='', graph=None):
         pool = multiprocessing.Pool()
         # parallel computing
@@ -95,21 +107,19 @@ class ScoreComputation:
                 recaps[param] += _res[param]
         
         self._recapitulating(recaps=recaps)
-        # for chunked_data in pd.read_csv(input_file, header=0, chunksize=self.chunk_size):
-        #     result = self.treat_links(chunked_data, graph)
-        #     print(result)
     
     def _recapitulating(self, recaps={}):
-        # n_r_n = recap['00']
         n_r_p = recaps['01']
         p_r_n = recaps['10']
         p_r_p = recaps['11']
-        print(self.recaps)
-        # positives = int(recap['positives'])
-        # negatives = int(recap['negatives'])
-        precision = (p_r_p) / (p_r_p + p_r_n)
-        recall = (p_r_p) / (p_r_p + n_r_p)
-        fmeasure = (2*precision*recall) / (precision + recall)
+        try:
+            precision = (p_r_p) / (p_r_p + p_r_n)
+            recall = (p_r_p) / (p_r_p + n_r_p)
+            fmeasure = (2*precision*recall) / (precision + recall)
+        except ZeroDivisionError:
+            precision = 0
+            recall = 0
+            fmeasure = 0
         self.recaps['precision'] = precision
         self.recaps['recall'] = recall
         self.recaps['fmeasure'] = fmeasure
@@ -123,16 +133,15 @@ class ScoreComputation:
     def run(self):
         start_time = time.time()
         graph = self.build_graph(input_file=self.input_same_as_file)
-        # self.get_positive_links(graph=graph)
-        self.chuncked_treatment(input_file=self.input_good_validation, graph=graph)
-        # processor_count = multiprocessing.cpu_count()
+        self.feedback(input_file=self.input_good_validation, graph=graph)
         print('Process ended')
         print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == '__main__' :
     def arg_manager():
         parser = argparse.ArgumentParser()
-        parser.add_argument("--input_path", type=str, default="./inputs/doremus/")
+        parser.add_argument("--input_source", type=str, default="./inputs/doremus/source.ttl")
+        parser.add_argument("--input_target", type=str, default="./inputs/doremus/target.ttl")
         parser.add_argument("--output_path", type=str, default="./outputs/doremus/")
         parser.add_argument("--alpha_predicate", type=float, default=1)
         parser.add_argument("--alpha", type=float, default=0.88)
@@ -146,6 +155,6 @@ if __name__ == '__main__' :
         valid = args.validation
     else:
         valid = Reformulation(input_file=args.validation).run()
-    ScoreComputation(input_good_validation=args.output_path + 'good_to_validate.csv', 
+    ScoreComputation(input_good_validation=args.output_path + 'same_as_entities.ttl', 
                 input_same_as_file=valid, chunk_size=1000).run()
     

@@ -58,39 +58,42 @@ class DeepSimilarity:
         _first_common_percent = len(common_string)/len(value1);
         _second_common_percent = len(common_string)/len(value2);
         if len(value1) > 1 and len(value2) > 1 :
-            _nfirst_part = value1.replace(common_string, '')
-            _nsecond_part = value2.replace(common_string, '')
-            common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
-            if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
-                decision = False
-            else:
-                mean_score = (_first_common_percent + _second_common_percent ) / 2
-                if mean_score >= alpha : # 0.88
-                    decision = True
+            # _nfirst_part = value1.replace(common_string, '')
+            # _nsecond_part = value2.replace(common_string, '')
+            # common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
+            # if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
+            #     decision = False
+            # else:
+            mean_score = (_first_common_percent + _second_common_percent ) / 2
+            if mean_score >= alpha : # 0.88
+                decision = True
         return decision
 
     def measure1_(self, value1='', value2='', alpha=0, level=1):
         decision = False
         mean_score = 0
-        if len(value1) > 1 and len(value2) > 1 :
+        val_len1 = len(value1)
+        val_len2 = len(value2)
+        # ratio  = val_len1/val_len2
+        if val_len1 > 1 and val_len2 > 1 : # and ratio < 1:
             common_string = StringUtils().longest_substring_finder(string1=value1, string2=value2)
-            _first_common_percent = len(common_string)/len(value1);
-            _second_common_percent = len(common_string)/len(value2);
-            _nfirst_part = value1.replace(common_string, '')
-            _nsecond_part = value2.replace(common_string, '')
-            common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
-            if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
-                decision = False
+            _first_common_percent = len(common_string)/val_len1
+            _second_common_percent = len(common_string)/val_len2
+            mean_score = (_first_common_percent + _second_common_percent ) / 2
+            if (mean_score >= alpha) :
+                decision = True
             else:
-                mean_score = (_first_common_percent + _second_common_percent ) / 2
-                if len(common_string2) > 0 and level > 0 :
-                    decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part, alpha=alpha, level=level-1)
+                _nfirst_part = value1.replace(common_string, '')
+                _nsecond_part = value2.replace(common_string, '')    
+                common_string2 = StringUtils().longest_substring_finder(string1=_nfirst_part, string2=_nsecond_part)
+                if common_string2 == '' and (self.containsNumber(_nfirst_part) or self.containsNumber(_nsecond_part)):
+                    decision = False
                 else:
-                    if (mean_score >= alpha) :
-                        decision = True
-        if decision:
-            message = 'level : ' + str(level) + ' score : ' + str(mean_score) + ' value1 : ' + value1 + ' vs value2 : ' + value2
-            dump().write_to_txt(file_path='./outputs/logs/comparisons.txt', values=[message])
+                    if len(common_string2) > 0 and level > 0 :
+                        decision = self.measure1_(value1=_nfirst_part, value2=_nsecond_part, alpha=alpha, level=level-1)                   
+        # if decision:
+        #     message = 'level : ' + str(level) + ' score : ' + str(mean_score) + ' value1 : ' + value1 + ' vs value2 : ' + value2
+        #     dump().write_to_txt(file_path='./outputs/logs/comparisons.txt', values=[message])
         return decision
 
     def measure2(self, value1='', value2=''):
@@ -122,5 +125,6 @@ class DeepSimilarity:
         # else:
             # print('comparison of simple string')
         output = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha, level=level) # and self.measure2(value1=_first_value, value2=_second_value)
+        # print('>>>>>>>>>>', output)
         return output
 

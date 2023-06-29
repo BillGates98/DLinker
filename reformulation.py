@@ -1,3 +1,4 @@
+from get_format import get_format
 from rdflib import Graph
 from rdflib.namespace import RDF
 from compute_files import ComputeFile
@@ -12,7 +13,7 @@ class Reformulation:
     
     def build_graph(self, input_file=''):
         graph = Graph()
-        graph.parse(input_file, format='trig')
+        graph.parse(input_file, format=get_format(value=input_file))
         return graph
     
     def write_to_file(self, file_path=None,values=[]):
