@@ -121,8 +121,10 @@ class ComputeSimilarPredicate:
         values = {}
         for f_uri_predicate, first_value in first_predicates:
             for s_uri_predicate, second_value in second_predicates:
+                # print(f_uri_predicate, s_uri_predicate)
                 tmp_similarity, similarity_percent = self.compute_similar_values(first_value=first_value, second_value=second_value)
-                if tmp_similarity :
+                # print('tmp_similarity > ', similarity_percent)
+                if tmp_similarity : # and (not 'date' in first_value.lower()) and (not 'date' in second_value.lower()):
                     # print('>>>>>>>>>> ', f_uri_predicate, ' # ', s_uri_predicate, ' ==> ', tmp_similarity)
                     fupredicates.append(f_uri_predicate)
                     fupredicates_v.append(first_value)

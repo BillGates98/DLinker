@@ -122,8 +122,10 @@ if __name__ == '__main__':
         parser = argparse.ArgumentParser()
         parser.add_argument("--input_data", type=str, default='./conversions/doremus/data_doremus.xml')
         parser.add_argument("--input_path", type=str, default='./inputs/doremus/')
-        parser.add_argument("--output_path", type=str, default="./validations/doremus/adding/")
+        parser.add_argument("--output_path", type=str, default="./validations/doremus/")
         return parser.parse_args()
     args = arg_manager()
     Convertor(input_path=args.input_path, input_file=args.input_data,
               destination=args.output_path).run()
+
+# python3.8 ./convert_xml_to_graph.py --input_data ./conversions/spimbench2/refalign.xml --input_path ./inputs/spimbench2/ --output_path ./validations/spimbench2/
