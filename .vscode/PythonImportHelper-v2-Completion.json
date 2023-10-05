@@ -1,0 +1,1313 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "SparqlEndpoint",
+        "importPath": "sparql_endpoint",
+        "description": "sparql_endpoint",
+        "isExtraImport": true,
+        "detail": "sparql_endpoint",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "log",
+        "description": "log",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "isExtraImport": true,
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSimilarity",
+        "importPath": "deep_similarity",
+        "description": "deep_similarity",
+        "isExtraImport": true,
+        "detail": "deep_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSimilarity",
+        "importPath": "deep_similarity",
+        "description": "deep_similarity",
+        "isExtraImport": true,
+        "detail": "deep_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSimilarity",
+        "importPath": "deep_similarity",
+        "description": "deep_similarity",
+        "isExtraImport": true,
+        "detail": "deep_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSimilarity",
+        "importPath": "deep_similarity",
+        "description": "deep_similarity",
+        "isExtraImport": true,
+        "detail": "deep_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "importPath": "get_format",
+        "description": "get_format",
+        "isExtraImport": true,
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Namespace",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "RDF",
+        "importPath": "rdflib.namespace",
+        "description": "rdflib.namespace",
+        "isExtraImport": true,
+        "detail": "rdflib.namespace",
+        "documentation": {}
+    },
+    {
+        "label": "ParseException",
+        "importPath": "pyparsing",
+        "description": "pyparsing",
+        "isExtraImport": true,
+        "detail": "pyparsing",
+        "documentation": {}
+    },
+    {
+        "label": "ParseException",
+        "importPath": "pyparsing",
+        "description": "pyparsing",
+        "isExtraImport": true,
+        "detail": "pyparsing",
+        "documentation": {}
+    },
+    {
+        "label": "ParseException",
+        "importPath": "pyparsing",
+        "description": "pyparsing",
+        "isExtraImport": true,
+        "detail": "pyparsing",
+        "documentation": {}
+    },
+    {
+        "label": "ParseException",
+        "importPath": "pyparsing",
+        "description": "pyparsing",
+        "isExtraImport": true,
+        "detail": "pyparsing",
+        "documentation": {}
+    },
+    {
+        "label": "itertools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "itertools",
+        "description": "itertools",
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "product",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "importPath": "dump",
+        "description": "dump",
+        "isExtraImport": true,
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "validators",
+        "description": "validators",
+        "detail": "validators",
+        "documentation": {}
+    },
+    {
+        "label": "multiprocessing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "Manager",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "tz",
+        "importPath": "dateutil",
+        "description": "dateutil",
+        "isExtraImport": true,
+        "detail": "dateutil",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "locale",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "locale",
+        "description": "locale",
+        "detail": "locale",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "boolean",
+        "importPath": "xmlrpc.client",
+        "description": "xmlrpc.client",
+        "isExtraImport": true,
+        "detail": "xmlrpc.client",
+        "documentation": {}
+    },
+    {
+        "label": "CheckSimilarity",
+        "importPath": "check_similarity",
+        "description": "check_similarity",
+        "isExtraImport": true,
+        "detail": "check_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "spacy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "spacy",
+        "description": "spacy",
+        "detail": "spacy",
+        "documentation": {}
+    },
+    {
+        "label": "chunk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "chunk",
+        "description": "chunk",
+        "detail": "chunk",
+        "documentation": {}
+    },
+    {
+        "label": "MatrixHandling",
+        "importPath": "matrixhandling",
+        "description": "matrixhandling",
+        "isExtraImport": true,
+        "detail": "matrixhandling",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Reformulation",
+        "importPath": "reformulation",
+        "description": "reformulation",
+        "isExtraImport": true,
+        "detail": "reformulation",
+        "documentation": {}
+    },
+    {
+        "label": "Reformulation",
+        "importPath": "reformulation",
+        "description": "reformulation",
+        "isExtraImport": true,
+        "detail": "reformulation",
+        "documentation": {}
+    },
+    {
+        "label": "StringUtils",
+        "importPath": "string_utils",
+        "description": "string_utils",
+        "isExtraImport": true,
+        "detail": "string_utils",
+        "documentation": {}
+    },
+    {
+        "label": "StringUtils",
+        "importPath": "string_utils",
+        "description": "string_utils",
+        "isExtraImport": true,
+        "detail": "string_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "entities",
+        "importPath": "html",
+        "description": "html",
+        "isExtraImport": true,
+        "detail": "html",
+        "documentation": {}
+    },
+    {
+        "label": "xmltodict",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xmltodict",
+        "description": "xmltodict",
+        "detail": "xmltodict",
+        "documentation": {}
+    },
+    {
+        "label": "xlwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xlwt",
+        "description": "xlwt",
+        "detail": "xlwt",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "importPath": "cache",
+        "description": "cache",
+        "isExtraImport": true,
+        "detail": "cache",
+        "documentation": {}
+    },
+    {
+        "label": "HandlePredicates",
+        "importPath": "handle_predicates",
+        "description": "handle_predicates",
+        "isExtraImport": true,
+        "detail": "handle_predicates",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeSimilarPredicate",
+        "importPath": "compute_similars_pairs_predicates",
+        "description": "compute_similars_pairs_predicates",
+        "isExtraImport": true,
+        "detail": "compute_similars_pairs_predicates",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "kind": 6,
+        "importPath": "cache",
+        "description": "cache",
+        "peekOfCode": "class Cache:\n    def __init__(self, file_path='./cache/cache.json'):\n        self.file_path = file_path\n        self.data = None\n    def get_item(self, key=''):\n        is_present = False\n        f = open(self.file_path,)\n        self.data = json.load(f)\n        # f.close()\n        _key = base64.b64encode((key).encode('ascii')).decode('ascii')",
+        "detail": "cache",
+        "documentation": {}
+    },
+    {
+        "label": "CandidateEntityPairs",
+        "kind": 6,
+        "importPath": "candidate_entities_pairs",
+        "description": "candidate_entities_pairs",
+        "peekOfCode": "class CandidateEntityPairs:\n    def __init__(self, input_source='',  input_target='', output_path='', similar_predicates_path='', alpha=0, phi=0, level=1):\n        log.info(\"Candidates Entities Pairs started \")\n        self.predicates_pairs = self.read_similar_predicates(file_name=similar_predicates_path)\n        self.input_source = input_source\n        self.input_target = input_target\n        self.output_path = output_path\n        self.input_files = []\n        self.limit = 10\n        self.start_time = time.time()",
+        "detail": "candidate_entities_pairs",
+        "documentation": {}
+    },
+    {
+        "label": "divide_chunks",
+        "kind": 2,
+        "importPath": "candidate_entities_pairs",
+        "description": "candidate_entities_pairs",
+        "peekOfCode": "def divide_chunks(l, n):\n    outputs = [] \n    data = list(l)\n    for i in range(0, len(data), n):\n        outputs.append(data[i:i + n])\n    return outputs\nclass CandidateEntityPairs:\n    def __init__(self, input_source='',  input_target='', output_path='', similar_predicates_path='', alpha=0, phi=0, level=1):\n        log.info(\"Candidates Entities Pairs started \")\n        self.predicates_pairs = self.read_similar_predicates(file_name=similar_predicates_path)",
+        "detail": "candidate_entities_pairs",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PYTHONIOENCODING\"]",
+        "kind": 5,
+        "importPath": "candidate_entities_pairs",
+        "description": "candidate_entities_pairs",
+        "peekOfCode": "os.environ[\"PYTHONIOENCODING\"] = \"utf-8\"\nscriptLocale=locale.setlocale(category=locale.LC_ALL, locale=\"en_GB.UTF-8\")\ndef divide_chunks(l, n):\n    outputs = [] \n    data = list(l)\n    for i in range(0, len(data), n):\n        outputs.append(data[i:i + n])\n    return outputs\nclass CandidateEntityPairs:\n    def __init__(self, input_source='',  input_target='', output_path='', similar_predicates_path='', alpha=0, phi=0, level=1):",
+        "detail": "candidate_entities_pairs",
+        "documentation": {}
+    },
+    {
+        "label": "CheckSimilarity",
+        "kind": 6,
+        "importPath": "check_similarity",
+        "description": "check_similarity",
+        "peekOfCode": "class CheckSimilarity: \n    \"\"\" [Check Similarity Measure]\n        To confirm the similarity measure we must ensure that,\n        2 predicates with high similarity  measure must have at least one common object\n    \"\"\"\n    def __init__(self, graphs=None):\n        super().__init__()\n        self.graphs = graphs\n    def get_same_objects_from_different_predicate(self, g=None, f_predicate='', s_predicate=''):\n        query = \"\"\"SELECT DISTINCT ?fobject",
+        "detail": "check_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeFile",
+        "kind": 6,
+        "importPath": "compute_files",
+        "description": "compute_files",
+        "peekOfCode": "class ComputeFile: \n    def __init__(self, input_path='', output_path=''):\n        self.input_path = input_path\n        self.output_path = output_path\n        self.input_files = []\n        self.output_files = []\n        self.extensions = ['.ttl', '.nt', '.rdf', '.owl']\n    def build_graph(self, input_file=''):\n        graph = Graph()\n        graph.parse(input_file, format=get_format(value=input_file))",
+        "detail": "compute_files",
+        "documentation": {}
+    },
+    {
+        "label": "ComputeSimilarPredicate",
+        "kind": 6,
+        "importPath": "compute_similars_pairs_predicates",
+        "description": "compute_similars_pairs_predicates",
+        "peekOfCode": "class ComputeSimilarPredicate:\n    def __init__(self, predicates=[], graphs=None, alpha_predicate=1, output_path=''):\n        self.predicates = predicates\n        self.path_to_file = './outputs/outputs.json'\n        self.graphs = graphs\n        self.associated_predicates = {}\n        self.alpha_predicate = alpha_predicate\n        self.output_path = output_path\n        log.info('Compute similars predicates')\n    def get_initial_predicate_with_uri(self, value=''):",
+        "detail": "compute_similars_pairs_predicates",
+        "documentation": {}
+    },
+    {
+        "label": "nlp",
+        "kind": 5,
+        "importPath": "compute_similars_pairs_predicates",
+        "description": "compute_similars_pairs_predicates",
+        "peekOfCode": "nlp = spacy.load('en_core_web_md')\nclass ComputeSimilarPredicate:\n    def __init__(self, predicates=[], graphs=None, alpha_predicate=1, output_path=''):\n        self.predicates = predicates\n        self.path_to_file = './outputs/outputs.json'\n        self.graphs = graphs\n        self.associated_predicates = {}\n        self.alpha_predicate = alpha_predicate\n        self.output_path = output_path\n        log.info('Compute similars predicates')",
+        "detail": "compute_similars_pairs_predicates",
+        "documentation": {}
+    },
+    {
+        "label": "Hyperparameter",
+        "kind": 6,
+        "importPath": "computehyperparameter",
+        "description": "computehyperparameter",
+        "peekOfCode": "class Hyperparameter:\n    def __init__(self, source_file='', target_file='', training_file=''):\n        self.source_file = source_file\n        self.target_file = target_file\n        self.training_file = training_file\n        self.datasets_measured = []\n        self.start_time = time.time()\n        log.info('###   Hyperparameter computation started    ###')\n    def build_graph(self, input_file=''):\n        graph = Graph()",
+        "detail": "computehyperparameter",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Config:\n    def __init__(self, file_path='./config/config.json'):\n        super().__init__()\n        self.file_path = file_path\n        self.data = None\n    def load(self, key=''):\n        f = open(self.file_path,)\n        self.data = json.load(f)\n        f.close()\n        if key:",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Convertor",
+        "kind": 6,
+        "importPath": "convert_xml_to_graph",
+        "description": "convert_xml_to_graph",
+        "peekOfCode": "class Convertor:\n    def __init__(self, input_path='', input_file='', destination=''):\n        print('Convertor')\n        self.xml = None\n        self.destination = destination\n        self.input_path = input_path\n        with open(input_file) as xmlfile:\n            self.xml = xmltodict.parse(xmlfile.read())\n    def cartesian_product(self, set1=[], set2=[]):\n        return list(product(set1, set2))",
+        "detail": "convert_xml_to_graph",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSimilarity",
+        "kind": 6,
+        "importPath": "deep_similarity",
+        "description": "deep_similarity",
+        "peekOfCode": "class DeepSimilarity:\n    def __init__(self, code=''):\n        # print('Deep String Similarity')\n        self.code = code\n    def containsNumber(self, value):\n        for character in value:\n            if character.isdigit():\n                return True\n        return False\n    def ngram_similarity(self, value1='', value2='', N=3):",
+        "detail": "deep_similarity",
+        "documentation": {}
+    },
+    {
+        "label": "dump",
+        "kind": 6,
+        "importPath": "dump",
+        "description": "dump",
+        "peekOfCode": "class dump:\n    def __init__(self):\n        self.workbook = xlwt.Workbook()\n        # print('Writing to file will start')\n    def write_to_csv(self, file_name = '', entries=[] ):\n        with open('./profiling_output/'+ file_name +'.csv', 'w', newline='') as file:\n            writer = csv.writer(file)\n            for data in entries : \n                writer.writerow(data)\n    def write_to_txt(self, file_path='', values=[]):",
+        "detail": "dump",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateSource",
+        "kind": 6,
+        "importPath": "generate_source",
+        "description": "generate_source",
+        "peekOfCode": "class GenerateSource:\n    def __init__(self, input_file='', path_destination='', chunk_size=1000, must_augment=False):\n        self.input_file = input_file\n        self.path_destination = path_destination\n        self.chunk_size = chunk_size\n        self.must_augment = must_augment\n        print('Generate Source started !')\n    def load_graph(self, input_file=''):\n        \"\"\"\n            expands the data and puts the new version in the associated output file",
+        "detail": "generate_source",
+        "documentation": {}
+    },
+    {
+        "label": "get_format",
+        "kind": 2,
+        "importPath": "get_format",
+        "description": "get_format",
+        "peekOfCode": "def get_format(value=''):\n    extensions = ['.rdf', '.owl', '.xml']\n    for ext in extensions :\n        if ext in value : \n            return 'xml'\n    return 'trig'",
+        "detail": "get_format",
+        "documentation": {}
+    },
+    {
+        "label": "HandlePredicates",
+        "kind": 6,
+        "importPath": "handle_predicates",
+        "description": "handle_predicates",
+        "peekOfCode": "class HandlePredicates: \n    def __init__(self, input_files=[], graphs=[]):\n        super().__init__()\n        self.input_files = input_files\n        self.grapĥs = graphs\n        self.dataset_predicates = []\n    def get_suffix(self, value='', prefixes=[]):\n        for prefix in prefixes:\n            if prefix in value :\n                return value.replace(prefix, '')",
+        "detail": "handle_predicates",
+        "documentation": {}
+    },
+    {
+        "label": "debug",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def debug(message):\n    logging.debug(message)\ndef info(message):\n    logging.info(message)\ndef error(message):\n    logging.error(message)\ndef warning(message):\n    logging.warning(message)\ndef exception(message):\n    logging.exception(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "info",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def info(message):\n    logging.info(message)\ndef error(message):\n    logging.error(message)\ndef warning(message):\n    logging.warning(message)\ndef exception(message):\n    logging.exception(message)\ndef critical(message):\n    logging.critical(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def error(message):\n    logging.error(message)\ndef warning(message):\n    logging.warning(message)\ndef exception(message):\n    logging.exception(message)\ndef critical(message):\n    logging.critical(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "warning",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def warning(message):\n    logging.warning(message)\ndef exception(message):\n    logging.exception(message)\ndef critical(message):\n    logging.critical(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "exception",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def exception(message):\n    logging.exception(message)\ndef critical(message):\n    logging.critical(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "critical",
+        "kind": 2,
+        "importPath": "log",
+        "description": "log",
+        "peekOfCode": "def critical(message):\n    logging.critical(message)",
+        "detail": "log",
+        "documentation": {}
+    },
+    {
+        "label": "Main",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Main: \n    def __init__(self, input_path='', output_path='', alpha_predicate=0):\n        self.input_path = input_path\n        self.output_path = output_path\n        self.input_files = []\n        self.start_time = time.time()\n        self.alpha_predicate = alpha_predicate\n        log.info('###   Predicates similarities started    ###')\n    def run(self):\n        inputs, _, graphs = ComputeFile(input_path=self.input_path, output_path=self.output_path).build_list_files()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MatrixHandling",
+        "kind": 6,
+        "importPath": "matrixhandling copy",
+        "description": "matrixhandling copy",
+        "peekOfCode": "class MatrixHandling:\n    def __init__(self, ptensors=[], ltensors=[], predicates_couples=[], output_path=''):\n        # print('Matrix handling')\n        self.ptensors = ptensors\n        self.ltensors = ltensors\n        self.predicates_couples = predicates_couples\n        self.output_path = output_path\n    \"\"\"_summary_ : find hyperparameter locally\n    \"\"\"\n    def predicate_ceil(self, matrix=[]):",
+        "detail": "matrixhandling copy",
+        "documentation": {}
+    },
+    {
+        "label": "MatrixHandling",
+        "kind": 6,
+        "importPath": "matrixhandling",
+        "description": "matrixhandling",
+        "peekOfCode": "class MatrixHandling:\n    def __init__(self, ptensors=[], ltensors=[], predicates_couples=[], output_path=''):\n        print('Matrix handling')\n        self.ptensors = ptensors\n        self.ltensors = ltensors\n        self.predicates_couples = predicates_couples\n        self.output_path = output_path\n    \"\"\"_summary_ : find hyperparameter locally\n    \"\"\"\n    def predicate_ceil(self, matrix=[]):",
+        "detail": "matrixhandling",
+        "documentation": {}
+    },
+    {
+        "label": "MergeGraph",
+        "kind": 6,
+        "importPath": "merge_graph",
+        "description": "merge_graph",
+        "peekOfCode": "class MergeGraph: \n    def __init__(self, input_path='', output_path=''):\n        self.input_path = input_path\n        self.output_path = output_path\n        now = datetime.now()\n        date_string = now.strftime(\"%m/%d/%Y at %H:%M:%S\")\n        log.info('###   Merge Graph process started the ' + date_string + '  ###')\n    def load_graph(self, graph=Graph(), input_file=''):\n        \"\"\"\n            expands the data and puts the new version in the associated output file",
+        "detail": "merge_graph",
+        "documentation": {}
+    },
+    {
+        "label": "Reformulation",
+        "kind": 6,
+        "importPath": "reformulation",
+        "description": "reformulation",
+        "peekOfCode": "class Reformulation: \n    def __init__(self, input_file=''):\n        self.input_file = input_file\n        self.output_file = input_file.replace(input_file.split('.')[-1], 'ttl')\n    def build_graph(self, input_file=''):\n        graph = Graph()\n        graph.parse(input_file, format=get_format(value=input_file))\n        return graph\n    def write_to_file(self, file_path=None,values=[]):\n        with open(file_path, 'a') as f:",
+        "detail": "reformulation",
+        "documentation": {}
+    },
+    {
+        "label": "ScoreComputation",
+        "kind": 6,
+        "importPath": "score_computation",
+        "description": "score_computation",
+        "peekOfCode": "class ScoreComputation:\n    def __init__(self, input_good_validation='', input_bad_validation='', input_same_as_file='', chunk_size=1000):\n        self.input_good_validation = input_good_validation\n        self.input_bad_validation = input_bad_validation\n        self.input_same_as_file = input_same_as_file\n        self.chunk_size = chunk_size\n        self.recaps = {\n            '00': 0,\n            '01': 0,\n            '10': 0,",
+        "detail": "score_computation",
+        "documentation": {}
+    },
+    {
+        "label": "StringUtils",
+        "kind": 6,
+        "importPath": "string_utils",
+        "description": "string_utils",
+        "peekOfCode": "class StringUtils:\n    def __init__(self):\n        pass\n    def clean_value(self, value=''):\n        \"\"\"[returns a syntactically and easily comparable sentence]\n        Args:\n            value (str): [string with special characters].\n        Returns:\n            [type]: [string without special characters]\n        \"\"\"",
+        "detail": "string_utils",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "g = Graph()\n# Espace de noms RDF et OWL\nrdf = Namespace(\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\")\nowl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "rdf",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "rdf = Namespace(\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\")\nowl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:\n            sujet, objet = columns\n            # print(sujet, ' ----> ', objet)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "owl",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "owl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:\n            sujet, objet = columns\n            # print(sujet, ' ----> ', objet)\n            # Créer des URI pour le sujet et l'objet",
+        "detail": "test",
+        "documentation": {}
+    }
+]

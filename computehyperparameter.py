@@ -75,19 +75,10 @@ class Hyperparameter:
         return output # { predicate: [object1, ... ,objectn]}
     
     def get_percents(self, value1='', value2=''):
-        value, mean_percent = StringUtils().longest_common_subseq(string1=value1, string2=value2)
-        final_percents = [mean_percent]
-        _svalue1 = value1
-        _svalue2 = value2
-        # print(value1, ' - ', value2)
-        while len(value) >= 3 :
-            _svalue1 = _svalue1.replace(value, '')
-            _svalue2 = _svalue2.replace(value, '')
-            value, mean_percent = StringUtils().longest_common_subseq(string1=_svalue1, string2=_svalue2)
-            if value != '' :
-                final_percents.append(mean_percent)
-            # print(_svalue1, ' - ', _svalue2)
-        return final_percents
+        ds = DeepSimilarity(code='*')
+        lcs, hamming = ds._comparison(first=value1, second=value2)
+        return (lcs, hamming)
+
     
     def update_measurements(self, dataset=[], sentity='', tentity='', type='', values=[]):
         output = []
@@ -113,13 +104,25 @@ class Hyperparameter:
             return output
     
     def normalze_features(self, values=[], predicates_couples=[]):
-        max_len_pred = max([len(x) for value in values for x in value['predicates']])
-        max_len_literals = max([len(x) for value in values for x in value['literals']])
+        max_len_pred = max([len(value['predicates']) for value in values])
+        max_len_literals = max([len(value['literals']) for value in values])
         _predicates = []
         _literals = []
         for value in values:
-            value['predicates'] = [ (val + [0.0 for _ in range(max_len_pred-len(val))]) for val in value['predicates']]
-            value['literals'] = [ (val + [0.0 for _ in range(max_len_literals-len(val))]) for val in value['literals']]
+            tmp_pred = value['predicates']
+            tmp_obj = value['literals']
+            # print(max_len_pred, ' ------------- ', len(tmp_pred))
+            if max_len_pred-len(tmp_pred) > 0 :
+                tmp_pred = tmp_pred + [(0.0, 0.0) for _ in range(max_len_pred-len(tmp_pred))]
+            value['predicates'] = tmp_pred
+            # print(value['predicates'])
+            
+            # print(max_len_literals, ' ------------- ', len(tmp_obj))
+            if max_len_literals-len(tmp_obj) > 0 :
+                tmp_obj = tmp_obj + [(0.0, 0.0) for _ in range(max_len_literals-len(tmp_obj))]
+            value['literals'] = tmp_obj
+            # print(value['literals'])
+            # exit()
             _predicates.append(value['predicates'])
             _literals.append(value['literals'])
         dataname, _output, good_predicates = MatrixHandling(ptensors=_predicates, ltensors=_literals, predicates_couples=predicates_couples, output_path=os.path.dirname(self.target_file)).run()
@@ -150,13 +153,15 @@ class Hyperparameter:
                 for spred in source_entity:
                     for tpred in target_entity:
                         tmp_percents = self.get_percents(value1=spred, value2=tpred)
-                        _predicates_percents = _predicates_percents + tmp_percents
+                        # print('predicate level: ', tmp_percents)
+                        _predicates_percents = _predicates_percents + [tmp_percents]
                         self.datasets_measured = self.update_measurements(dataset=self.datasets_measured, sentity=couple['source'], tentity=couple['target'], type='predicates', values=tmp_percents)
                         predicates_couples.append((spred, tpred))
                         for svalue in source_entity[spred] :
                             for tvalue in target_entity[tpred] :
                                 tmp_percents = self.get_percents(value1=svalue, value2=tvalue)
-                                _literals_percents = _literals_percents + tmp_percents
+                                # print('\t objects level : ', tmp_percents)
+                                _literals_percents = _literals_percents + [tmp_percents]
                                 self.datasets_measured = self.update_measurements(dataset=self.datasets_measured, sentity=couple['source'], tentity=couple['target'], type='literals', values=tmp_percents)           
         print("--- %s seconds ---" % (time.time() - start_time))
         print('Process ended')
@@ -178,3 +183,4 @@ if __name__ == '__main__' :
     Hyperparameter(source_file=args.source_file, target_file=args.target_file, training_file=training).run()
 
 # python3.8 ./computehyperparameter.py --source_file ./inputs/spaten_hobbit/source.nt --target_file ./inputs/spaten_hobbit/target.nt --training_file ./validations/spaten_hobbit/valid_same_as.nt
+# python3.8 ./computehyperparameter.py --source_file ./inputs/doremus/source.nt --target_file ./inputs/doremus/target.nt --training_file ./validations/doremus/valid_same_as.nt

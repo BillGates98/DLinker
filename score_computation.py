@@ -44,7 +44,7 @@ class ScoreComputation:
         return graph
     
     def get_positive_links(self, graph=None):
-        query = """SELECT (count(?fsubject) as ?fcount)
+        query = """SELECT DISTINCT (count(?fsubject) as ?fcount)
                     WHERE {
                     ?fsubject  ?fpredicate  ?fobject .
                     }
@@ -52,6 +52,8 @@ class ScoreComputation:
         results = graph.query(query)
         for _count in results:
             self.recaps['positives'] = int(str(_count['fcount']))
+            # self.recaps['00'] = int(str(_count['fcount']))
+        print('True fact : ' , self.recaps['positives'])
         return 
     
     def get_link(self, graph=None, _fsubject='', _ssubject='', has_matched=None, recaps={}):
@@ -68,7 +70,7 @@ class ScoreComputation:
             if  fcount > 0:
                 key = str(has_matched) + '1'
             else:
-                key = str(has_matched) + '0'
+                key = '0' + str(has_matched)
             recaps[key] += 1
         return recaps
     
@@ -109,12 +111,14 @@ class ScoreComputation:
         self._recapitulating(recaps=recaps)
     
     def _recapitulating(self, recaps={}):
-        n_r_p = recaps['01']
-        p_r_n = recaps['10']
-        p_r_p = recaps['11']
+        tn = recaps['00']
+        fp = recaps['01']
+        fn = self.recaps['positives'] - (recaps['11'])
+        self.recaps['10'] = fn
+        tp = recaps['11']
         try:
-            precision = (p_r_p) / (p_r_p + p_r_n)
-            recall = (p_r_p) / (p_r_p + n_r_p)
+            precision = (tp) / (tp + fp)
+            recall = (tp) / (tp + fn)
             fmeasure = (2*precision*recall) / (precision + recall)
         except ZeroDivisionError:
             precision = 0
@@ -133,6 +137,7 @@ class ScoreComputation:
     def run(self):
         start_time = time.time()
         graph = self.build_graph(input_file=self.input_same_as_file)
+        self.get_positive_links(graph=graph)
         self.feedback(input_file=self.input_good_validation, graph=graph)
         print('Process ended')
         print("--- %s seconds ---" % (time.time() - start_time))

@@ -18,4 +18,8 @@ while IFS=',,,' read -r dataset sourcef targetf validsameas; do
     echo "File : $dataset will be processed ...100%" >> ./fast_log.txt
 done < "$1"
 
+### sh ./job_evaluation.sh ./datasets.txt
 ### Example : sh ./job.sh --input_path ./inputs/doremus/ --output ./outputs/doremus --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --validation ./validations/doremus/valid_same_as.ttl
+
+
+# sh ./job.sh --input_source ./inputs/doremus/source.ttl --input_target ./inputs/doremus/target.ttl --output_path ./outputs/doremus/ --alpha_predicate 1 --alpha 0.88 --phi 2 --measure_level 1 --validation ./validations/doremus/valid_same_as.ttl

@@ -119,6 +119,7 @@ class CandidateEntityPairs:
                     dump().write_to_txt(file_path='./outputs/logs/links.txt', values=[message])
                     graph = self.insert_to_graph(graph=graph, fsubject=fs, ssubject=ss)
                     messages.append(message)
+                    
         return graph, messages, good_entities_pairs
 
     def treat_entities_pairs(self, entities_pairs=[], alpha=0.0, recaps={}):

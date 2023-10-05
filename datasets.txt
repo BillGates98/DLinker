@@ -1,1 +1,1 @@
-spaten_hobbit,source.nt,target.nt,valid_same_as.ttl
+doremus,source.ttl,target.ttl,valid_same_as.ttl

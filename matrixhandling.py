@@ -7,7 +7,7 @@ from dump import dump
 class MatrixHandling:
     
     def __init__(self, ptensors=[], ltensors=[], predicates_couples=[], output_path=''):
-        # print('Matrix handling')
+        print('Matrix handling')
         self.ptensors = ptensors
         self.ltensors = ltensors
         self.predicates_couples = predicates_couples
@@ -16,9 +16,13 @@ class MatrixHandling:
     """_summary_ : find hyperparameter locally
     """
     def predicate_ceil(self, matrix=[]):
-        _matrix = np.matrix(matrix)
-        _max = np.argmax(_matrix)
-        return _matrix.item(_max)
+        _matrix = np.array(matrix)
+        # _max = np.argmax(_matrix)
+        lcs = [ np.mean(_matrix[:, 0]) ]
+        lcs_min = np.min(lcs)
+        hams = [ np.mean(_matrix[:, 1]) ]
+        ham_min = np.min(hams)
+        return lcs_min, ham_min
     
     def proportion_of_value(self, tab=[]):
         prop = 0
@@ -89,6 +93,8 @@ class MatrixHandling:
                 # print(self.ptensors[i])
                 cp = self.predicate_ceil(matrix=self.ptensors[i])
                 co, good_predicate = self.literal_ceil(matrix=self.ltensors[i])
+
+                print(cp, ' ---------- ', co)
                 # print(list(set(good_predicate)))
                 if co != None :
                     good_predicates = good_predicates + good_predicate
