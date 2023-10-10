@@ -1,96 +1,5 @@
 [
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "SparqlEndpoint",
-        "importPath": "sparql_endpoint",
-        "description": "sparql_endpoint",
-        "isExtraImport": true,
-        "detail": "sparql_endpoint",
-        "documentation": {}
-    },
-    {
-        "label": "log",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "log",
-        "description": "log",
-        "detail": "log",
-        "documentation": {}
-    },
-    {
-        "label": "base64",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "base64",
-        "description": "base64",
-        "detail": "base64",
-        "documentation": {}
-    },
-    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -123,46 +32,6 @@
         "documentation": {}
     },
     {
-        "label": "ComputeFile",
-        "importPath": "compute_files",
-        "description": "compute_files",
-        "isExtraImport": true,
-        "detail": "compute_files",
-        "documentation": {}
-    },
-    {
-        "label": "ComputeFile",
-        "importPath": "compute_files",
-        "description": "compute_files",
-        "isExtraImport": true,
-        "detail": "compute_files",
-        "documentation": {}
-    },
-    {
-        "label": "ComputeFile",
-        "importPath": "compute_files",
-        "description": "compute_files",
-        "isExtraImport": true,
-        "detail": "compute_files",
-        "documentation": {}
-    },
-    {
-        "label": "ComputeFile",
-        "importPath": "compute_files",
-        "description": "compute_files",
-        "isExtraImport": true,
-        "detail": "compute_files",
-        "documentation": {}
-    },
-    {
-        "label": "ComputeFile",
-        "importPath": "compute_files",
-        "description": "compute_files",
-        "isExtraImport": true,
-        "detail": "compute_files",
-        "documentation": {}
-    },
-    {
         "label": "DeepSimilarity",
         "importPath": "deep_similarity",
         "description": "deep_similarity",
@@ -192,30 +61,6 @@
         "description": "deep_similarity",
         "isExtraImport": true,
         "detail": "deep_similarity",
-        "documentation": {}
-    },
-    {
-        "label": "get_format",
-        "importPath": "get_format",
-        "description": "get_format",
-        "isExtraImport": true,
-        "detail": "get_format",
-        "documentation": {}
-    },
-    {
-        "label": "get_format",
-        "importPath": "get_format",
-        "description": "get_format",
-        "isExtraImport": true,
-        "detail": "get_format",
-        "documentation": {}
-    },
-    {
-        "label": "get_format",
-        "importPath": "get_format",
-        "description": "get_format",
-        "isExtraImport": true,
-        "detail": "get_format",
         "documentation": {}
     },
     {
@@ -299,22 +144,6 @@
         "documentation": {}
     },
     {
-        "label": "URIRef",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Graph",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
         "label": "Graph",
         "importPath": "rdflib",
         "description": "rdflib",
@@ -347,47 +176,7 @@
         "documentation": {}
     },
     {
-        "label": "Literal",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
         "label": "Graph",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Literal",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Graph",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Graph",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Literal",
         "importPath": "rdflib",
         "description": "rdflib",
         "isExtraImport": true,
@@ -396,14 +185,6 @@
     },
     {
         "label": "URIRef",
-        "importPath": "rdflib",
-        "description": "rdflib",
-        "isExtraImport": true,
-        "detail": "rdflib",
-        "documentation": {}
-    },
-    {
-        "label": "Graph",
         "importPath": "rdflib",
         "description": "rdflib",
         "isExtraImport": true,
@@ -419,6 +200,70 @@
         "documentation": {}
     },
     {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "URIRef",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Namespace",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "importPath": "rdflib",
+        "description": "rdflib",
+        "isExtraImport": true,
+        "detail": "rdflib",
+        "documentation": {}
+    },
+    {
         "label": "URIRef",
         "importPath": "rdflib",
         "description": "rdflib",
@@ -467,7 +312,7 @@
         "documentation": {}
     },
     {
-        "label": "RDF",
+        "label": "OWL",
         "importPath": "rdflib.namespace",
         "description": "rdflib.namespace",
         "isExtraImport": true,
@@ -475,43 +320,11 @@
         "documentation": {}
     },
     {
-        "label": "RDF",
+        "label": "OWL",
         "importPath": "rdflib.namespace",
         "description": "rdflib.namespace",
         "isExtraImport": true,
         "detail": "rdflib.namespace",
-        "documentation": {}
-    },
-    {
-        "label": "RDF",
-        "importPath": "rdflib.namespace",
-        "description": "rdflib.namespace",
-        "isExtraImport": true,
-        "detail": "rdflib.namespace",
-        "documentation": {}
-    },
-    {
-        "label": "RDF",
-        "importPath": "rdflib.namespace",
-        "description": "rdflib.namespace",
-        "isExtraImport": true,
-        "detail": "rdflib.namespace",
-        "documentation": {}
-    },
-    {
-        "label": "ParseException",
-        "importPath": "pyparsing",
-        "description": "pyparsing",
-        "isExtraImport": true,
-        "detail": "pyparsing",
-        "documentation": {}
-    },
-    {
-        "label": "ParseException",
-        "importPath": "pyparsing",
-        "description": "pyparsing",
-        "isExtraImport": true,
-        "detail": "pyparsing",
         "documentation": {}
     },
     {
@@ -556,35 +369,12 @@
         "documentation": {}
     },
     {
-        "label": "combinations",
-        "importPath": "itertools",
-        "description": "itertools",
+        "label": "log",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "itertools",
-        "documentation": {}
-    },
-    {
-        "label": "product",
-        "importPath": "itertools",
-        "description": "itertools",
-        "isExtraImport": true,
-        "detail": "itertools",
-        "documentation": {}
-    },
-    {
-        "label": "combinations",
-        "importPath": "itertools",
-        "description": "itertools",
-        "isExtraImport": true,
-        "detail": "itertools",
-        "documentation": {}
-    },
-    {
-        "label": "combinations",
-        "importPath": "itertools",
-        "description": "itertools",
-        "isExtraImport": true,
-        "detail": "itertools",
+        "importPath": "log",
+        "description": "log",
+        "detail": "log",
         "documentation": {}
     },
     {
@@ -617,62 +407,6 @@
         "description": "decimal",
         "isExtraImport": true,
         "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "dump",
-        "importPath": "dump",
-        "description": "dump",
-        "isExtraImport": true,
-        "detail": "dump",
-        "documentation": {}
-    },
-    {
-        "label": "dump",
-        "importPath": "dump",
-        "description": "dump",
-        "isExtraImport": true,
-        "detail": "dump",
-        "documentation": {}
-    },
-    {
-        "label": "dump",
-        "importPath": "dump",
-        "description": "dump",
-        "isExtraImport": true,
-        "detail": "dump",
-        "documentation": {}
-    },
-    {
-        "label": "dump",
-        "importPath": "dump",
-        "description": "dump",
-        "isExtraImport": true,
-        "detail": "dump",
         "documentation": {}
     },
     {
@@ -717,6 +451,15 @@
         "documentation": {}
     },
     {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
         "label": "multiprocessing",
         "kind": 6,
         "isExtraImport": true,
@@ -749,6 +492,46 @@
         "importPath": "hashlib",
         "description": "hashlib",
         "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -796,6 +579,15 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -839,29 +631,11 @@
         "documentation": {}
     },
     {
-        "label": "chunk",
-        "kind": 6,
+        "label": "StringUtils",
+        "importPath": "string_utils",
+        "description": "string_utils",
         "isExtraImport": true,
-        "importPath": "chunk",
-        "description": "chunk",
-        "detail": "chunk",
-        "documentation": {}
-    },
-    {
-        "label": "MatrixHandling",
-        "importPath": "matrixhandling",
-        "description": "matrixhandling",
-        "isExtraImport": true,
-        "detail": "matrixhandling",
-        "documentation": {}
-    },
-    {
-        "label": "pandas",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pandas",
-        "description": "pandas",
-        "detail": "pandas",
+        "detail": "string_utils",
         "documentation": {}
     },
     {
@@ -871,79 +645,6 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "Reformulation",
-        "importPath": "reformulation",
-        "description": "reformulation",
-        "isExtraImport": true,
-        "detail": "reformulation",
-        "documentation": {}
-    },
-    {
-        "label": "Reformulation",
-        "importPath": "reformulation",
-        "description": "reformulation",
-        "isExtraImport": true,
-        "detail": "reformulation",
-        "documentation": {}
-    },
-    {
-        "label": "StringUtils",
-        "importPath": "string_utils",
-        "description": "string_utils",
-        "isExtraImport": true,
-        "detail": "string_utils",
-        "documentation": {}
-    },
-    {
-        "label": "StringUtils",
-        "importPath": "string_utils",
-        "description": "string_utils",
-        "isExtraImport": true,
-        "detail": "string_utils",
-        "documentation": {}
-    },
-    {
-        "label": "Counter",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
-        "label": "Counter",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
-        "label": "Counter",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
-        "label": "entities",
-        "importPath": "html",
-        "description": "html",
-        "isExtraImport": true,
-        "detail": "html",
-        "documentation": {}
-    },
-    {
-        "label": "xmltodict",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "xmltodict",
-        "description": "xmltodict",
-        "detail": "xmltodict",
         "documentation": {}
     },
     {
@@ -983,11 +684,12 @@
         "documentation": {}
     },
     {
-        "label": "Cache",
-        "importPath": "cache",
-        "description": "cache",
+        "label": "pandas",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "cache",
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
         "documentation": {}
     },
     {
@@ -1007,28 +709,79 @@
         "documentation": {}
     },
     {
-        "label": "mean",
-        "importPath": "statistics",
-        "description": "statistics",
-        "isExtraImport": true,
-        "detail": "statistics",
-        "documentation": {}
-    },
-    {
-        "label": "mean",
-        "importPath": "statistics",
-        "description": "statistics",
-        "isExtraImport": true,
-        "detail": "statistics",
-        "documentation": {}
-    },
-    {
-        "label": "Cache",
+        "label": "rocker",
         "kind": 6,
-        "importPath": "cache",
-        "description": "cache",
-        "peekOfCode": "class Cache:\n    def __init__(self, file_path='./cache/cache.json'):\n        self.file_path = file_path\n        self.data = None\n    def get_item(self, key=''):\n        is_present = False\n        f = open(self.file_path,)\n        self.data = json.load(f)\n        # f.close()\n        _key = base64.b64encode((key).encode('ascii')).decode('ascii')",
-        "detail": "cache",
+        "isExtraImport": true,
+        "importPath": "rocker",
+        "description": "rocker",
+        "detail": "rocker",
+        "documentation": {}
+    },
+    {
+        "label": "chunk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "chunk",
+        "description": "chunk",
+        "detail": "chunk",
+        "documentation": {}
+    },
+    {
+        "label": "Reformulation",
+        "importPath": "reformulation",
+        "description": "reformulation",
+        "isExtraImport": true,
+        "detail": "reformulation",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Node2Vec",
+        "importPath": "graph2vec",
+        "description": "graph2vec",
+        "isExtraImport": true,
+        "detail": "graph2vec",
+        "documentation": {}
+    },
+    {
+        "label": "rdflib_to_networkx_multidigraph",
+        "importPath": "rdflib.extras.external_graph_libs",
+        "description": "rdflib.extras.external_graph_libs",
+        "isExtraImport": true,
+        "detail": "rdflib.extras.external_graph_libs",
+        "documentation": {}
+    },
+    {
+        "label": "networkx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "networkx",
+        "description": "networkx",
+        "detail": "networkx",
+        "documentation": {}
+    },
+    {
+        "label": "Node2Vec",
+        "importPath": "node2vec",
+        "description": "node2vec",
+        "isExtraImport": true,
+        "detail": "node2vec",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
         "documentation": {}
     },
     {
@@ -1095,30 +848,12 @@
         "documentation": {}
     },
     {
-        "label": "Hyperparameter",
-        "kind": 6,
-        "importPath": "computehyperparameter",
-        "description": "computehyperparameter",
-        "peekOfCode": "class Hyperparameter:\n    def __init__(self, source_file='', target_file='', training_file=''):\n        self.source_file = source_file\n        self.target_file = target_file\n        self.training_file = training_file\n        self.datasets_measured = []\n        self.start_time = time.time()\n        log.info('###   Hyperparameter computation started    ###')\n    def build_graph(self, input_file=''):\n        graph = Graph()",
-        "detail": "computehyperparameter",
-        "documentation": {}
-    },
-    {
         "label": "Config",
         "kind": 6,
         "importPath": "config",
         "description": "config",
         "peekOfCode": "class Config:\n    def __init__(self, file_path='./config/config.json'):\n        super().__init__()\n        self.file_path = file_path\n        self.data = None\n    def load(self, key=''):\n        f = open(self.file_path,)\n        self.data = json.load(f)\n        f.close()\n        if key:",
         "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "Convertor",
-        "kind": 6,
-        "importPath": "convert_xml_to_graph",
-        "description": "convert_xml_to_graph",
-        "peekOfCode": "class Convertor:\n    def __init__(self, input_path='', input_file='', destination=''):\n        print('Convertor')\n        self.xml = None\n        self.destination = destination\n        self.input_path = input_path\n        with open(input_file) as xmlfile:\n            self.xml = xmltodict.parse(xmlfile.read())\n    def cartesian_product(self, set1=[], set2=[]):\n        return list(product(set1, set2))",
-        "detail": "convert_xml_to_graph",
         "documentation": {}
     },
     {
@@ -1137,24 +872,6 @@
         "description": "dump",
         "peekOfCode": "class dump:\n    def __init__(self):\n        self.workbook = xlwt.Workbook()\n        # print('Writing to file will start')\n    def write_to_csv(self, file_name = '', entries=[] ):\n        with open('./profiling_output/'+ file_name +'.csv', 'w', newline='') as file:\n            writer = csv.writer(file)\n            for data in entries : \n                writer.writerow(data)\n    def write_to_txt(self, file_path='', values=[]):",
         "detail": "dump",
-        "documentation": {}
-    },
-    {
-        "label": "GenerateSource",
-        "kind": 6,
-        "importPath": "generate_source",
-        "description": "generate_source",
-        "peekOfCode": "class GenerateSource:\n    def __init__(self, input_file='', path_destination='', chunk_size=1000, must_augment=False):\n        self.input_file = input_file\n        self.path_destination = path_destination\n        self.chunk_size = chunk_size\n        self.must_augment = must_augment\n        print('Generate Source started !')\n    def load_graph(self, input_file=''):\n        \"\"\"\n            expands the data and puts the new version in the associated output file",
-        "detail": "generate_source",
-        "documentation": {}
-    },
-    {
-        "label": "get_format",
-        "kind": 2,
-        "importPath": "get_format",
-        "description": "get_format",
-        "peekOfCode": "def get_format(value=''):\n    extensions = ['.rdf', '.owl', '.xml']\n    for ext in extensions :\n        if ext in value : \n            return 'xml'\n    return 'trig'",
-        "detail": "get_format",
         "documentation": {}
     },
     {
@@ -1230,39 +947,12 @@
         "documentation": {}
     },
     {
-        "label": "MatrixHandling",
+        "label": "RDFKeyDiscovery",
         "kind": 6,
-        "importPath": "matrixhandling copy",
-        "description": "matrixhandling copy",
-        "peekOfCode": "class MatrixHandling:\n    def __init__(self, ptensors=[], ltensors=[], predicates_couples=[], output_path=''):\n        # print('Matrix handling')\n        self.ptensors = ptensors\n        self.ltensors = ltensors\n        self.predicates_couples = predicates_couples\n        self.output_path = output_path\n    \"\"\"_summary_ : find hyperparameter locally\n    \"\"\"\n    def predicate_ceil(self, matrix=[]):",
-        "detail": "matrixhandling copy",
-        "documentation": {}
-    },
-    {
-        "label": "MatrixHandling",
-        "kind": 6,
-        "importPath": "matrixhandling",
-        "description": "matrixhandling",
-        "peekOfCode": "class MatrixHandling:\n    def __init__(self, ptensors=[], ltensors=[], predicates_couples=[], output_path=''):\n        print('Matrix handling')\n        self.ptensors = ptensors\n        self.ltensors = ltensors\n        self.predicates_couples = predicates_couples\n        self.output_path = output_path\n    \"\"\"_summary_ : find hyperparameter locally\n    \"\"\"\n    def predicate_ceil(self, matrix=[]):",
-        "detail": "matrixhandling",
-        "documentation": {}
-    },
-    {
-        "label": "MergeGraph",
-        "kind": 6,
-        "importPath": "merge_graph",
-        "description": "merge_graph",
-        "peekOfCode": "class MergeGraph: \n    def __init__(self, input_path='', output_path=''):\n        self.input_path = input_path\n        self.output_path = output_path\n        now = datetime.now()\n        date_string = now.strftime(\"%m/%d/%Y at %H:%M:%S\")\n        log.info('###   Merge Graph process started the ' + date_string + '  ###')\n    def load_graph(self, graph=Graph(), input_file=''):\n        \"\"\"\n            expands the data and puts the new version in the associated output file",
-        "detail": "merge_graph",
-        "documentation": {}
-    },
-    {
-        "label": "Reformulation",
-        "kind": 6,
-        "importPath": "reformulation",
-        "description": "reformulation",
-        "peekOfCode": "class Reformulation: \n    def __init__(self, input_file=''):\n        self.input_file = input_file\n        self.output_file = input_file.replace(input_file.split('.')[-1], 'ttl')\n    def build_graph(self, input_file=''):\n        graph = Graph()\n        graph.parse(input_file, format=get_format(value=input_file))\n        return graph\n    def write_to_file(self, file_path=None,values=[]):\n        with open(file_path, 'a') as f:",
-        "detail": "reformulation",
+        "importPath": "rocker",
+        "description": "rocker",
+        "peekOfCode": "class RDFKeyDiscovery:\n    def __init__(self, rdf_file='', output_path=''):\n        self.rdf_file = rdf_file\n        self.graph = None\n        self.output_path = output_path\n        self.candidate_keys = []\n    def load_rdf_data(self):\n        with open(self.rdf_file, 'r', encoding='utf-8') as file:\n            rdf_data = file.read()\n        self.graph = rocker.RDFGraph(data=rdf_data)",
+        "detail": "rocker",
         "documentation": {}
     },
     {
@@ -1284,29 +974,146 @@
         "documentation": {}
     },
     {
-        "label": "g",
+        "label": "extract_entity_vectors",
+        "kind": 2,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "def extract_entity_vectors(rdf_file, vector_dim=100, walk_length=30, num_walks=10):\n    rdf_graph = Graph()\n    rdf_graph.parse(rdf_file, format=\"turtle\")\n    rdf2vec_model = Node2Vec(\n        dimensions=vector_dim,\n        walk_length=walk_length,\n        num_walks=num_walks,\n        workers=4\n    )\n    rdf2vec_model.fit(rdf_graph)",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_alignment_metrics",
+        "kind": 2,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "def calculate_alignment_metrics(output_file, truth_file):\n    output_graph = Graph()\n    output_graph.parse(output_file, format=\"turtle\")\n    truth_graph = Graph()\n    truth_graph.parse(truth_file, format=\"turtle\")\n    found_alignments = set(output_graph.subjects())\n    true_alignments = set(truth_graph.subjects())\n    intersection = len(found_alignments.intersection(true_alignments))\n    precision = intersection / len(found_alignments) if len(found_alignments) > 0 else 0.0\n    recall = intersection / len(true_alignments) if len(true_alignments) > 0 else 0.0",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_save_rdf_from_dict",
+        "kind": 2,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "def create_and_save_rdf_from_dict(input_dict, output_file):\n    graph = Graph()\n    # owl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n    for source, target in input_dict.items():\n        source_uri = URIRef(source)\n        target_uri = URIRef(target)\n        graph.add((source_uri, OWL.sameAs, target_uri))\n    graph.serialize(destination=output_file, format=\"turtle\")\ndef random_choice(value='', data=[], n = 1000):\n    ds = DeepSimilarity(code='*')",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "random_choice",
+        "kind": 2,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "def random_choice(value='', data=[], n = 1000):\n    ds = DeepSimilarity(code='*')\n    score = 0.0\n    _object = ''\n    _data = random.choices(data, k=n)\n    for i in range(len(_data)):\n        _score = ds.hamming(value1=value, value2=data[i])\n        score = _score if _score >= score else score\n        _object = data[i] if _score >= score else _object\n    return score, _object",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "process_rdf_files",
+        "kind": 2,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "def process_rdf_files(file1, file2):\n    graph1 = Graph()\n    graph1.parse(file1)\n    vectors1 = extract_entity_vectors(rdf_file=file1)\n    graph2 = Graph()\n    graph2.parse(file2)  \n    vectors2 = extract_entity_vectors(rdf_file=file2)\n    os1 = {}\n    op1 = {}\n    os2 = {}",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
         "kind": 5,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "output_file = './outputs/doremus/tmp_same_as.ttl'\ntruth_file = './validations/doremus/valid_same_as.ttl'\ndef extract_entity_vectors(rdf_file, vector_dim=100, walk_length=30, num_walks=10):\n    rdf_graph = Graph()\n    rdf_graph.parse(rdf_file, format=\"turtle\")\n    rdf2vec_model = Node2Vec(\n        dimensions=vector_dim,\n        walk_length=walk_length,\n        num_walks=num_walks,\n        workers=4",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "truth_file",
+        "kind": 5,
+        "importPath": "test copy",
+        "description": "test copy",
+        "peekOfCode": "truth_file = './validations/doremus/valid_same_as.ttl'\ndef extract_entity_vectors(rdf_file, vector_dim=100, walk_length=30, num_walks=10):\n    rdf_graph = Graph()\n    rdf_graph.parse(rdf_file, format=\"turtle\")\n    rdf2vec_model = Node2Vec(\n        dimensions=vector_dim,\n        walk_length=walk_length,\n        num_walks=num_walks,\n        workers=4\n    )",
+        "detail": "test copy",
+        "documentation": {}
+    },
+    {
+        "label": "sigmoid",
+        "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "g = Graph()\n# Espace de noms RDF et OWL\nrdf = Namespace(\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\")\nowl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:",
+        "peekOfCode": "def sigmoid(value):\n    return 1 / (1 + np.exp(value))\ndef cosine_sim(v1=[], v2=[]):\n    output = 0.0\n    dot = np.dot(v1, v2)\n    output = sigmoid(dot)\n    if output <= 0.10  :\n        # print(output)\n        return True\n    return False",
         "detail": "test",
         "documentation": {}
     },
     {
-        "label": "rdf",
-        "kind": 5,
+        "label": "cosine_sim",
+        "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "rdf = Namespace(\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\")\nowl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:\n            sujet, objet = columns\n            # print(sujet, ' ----> ', objet)",
+        "peekOfCode": "def cosine_sim(v1=[], v2=[]):\n    output = 0.0\n    dot = np.dot(v1, v2)\n    output = sigmoid(dot)\n    if output <= 0.10  :\n        # print(output)\n        return True\n    return False\ndef extract_entity_vectors_rdf(graph, index, embedding_dim=1000):\n    nx_graph = rdflib_to_networkx_multidigraph(graph)",
         "detail": "test",
         "documentation": {}
     },
     {
-        "label": "owl",
+        "label": "extract_entity_vectors_rdf",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def extract_entity_vectors_rdf(graph, index, embedding_dim=1000):\n    nx_graph = rdflib_to_networkx_multidigraph(graph)\n    node2vec = Node2Vec(nx_graph, dimensions=64, walk_length=30, num_walks=20, workers=4)\n    model = node2vec.fit(window=10, min_count=1, batch_words=4)  \n    return model # model.wv['subject']\ndef calculate_alignment_metrics(output_file, truth_file):\n    output_graph = Graph()\n    output_graph.parse(output_file, format=\"turtle\")\n    truth_graph = Graph()\n    truth_graph.parse(truth_file, format=\"turtle\")",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_alignment_metrics",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def calculate_alignment_metrics(output_file, truth_file):\n    output_graph = Graph()\n    output_graph.parse(output_file, format=\"turtle\")\n    truth_graph = Graph()\n    truth_graph.parse(truth_file, format=\"turtle\")\n    found_alignments = set(output_graph.subjects())\n    true_alignments = set(truth_graph.subjects())\n    intersection = len(found_alignments.intersection(true_alignments))\n    precision = intersection / len(found_alignments) if len(found_alignments) > 0 else 0.0\n    recall = intersection / len(true_alignments) if len(true_alignments) > 0 else 0.0",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_save_rdf_from_dict",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def create_and_save_rdf_from_dict(input_dict, output_file):\n    graph = Graph()\n    # owl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n    for source, target in input_dict.items():\n        source_uri = URIRef(source)\n        target_uri = URIRef(target)\n        graph.add((source_uri, OWL.sameAs, target_uri))\n    graph.serialize(destination=output_file, format=\"turtle\")\ndef random_choice(value='', data=[], n = 500):\n    ds = DeepSimilarity(code='*')",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "random_choice",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def random_choice(value='', data=[], n = 500):\n    ds = DeepSimilarity(code='*')\n    score = 0.0\n    _object = ''\n    _data = random.choices(data, k=n)\n    values = [ ds.jaro_similarity(value1=value, value2=d)  for d in _data ]\n    score = max(values)\n    index = values.index(score)\n    _object = _data[index]\n    return score, _object",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "process_rdf_files",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def process_rdf_files(file1, file2):\n    graph1 = Graph()\n    graph1.parse(file1)\n    vectors1 = extract_entity_vectors_rdf(graph=graph1, index=1)\n    graph2 = Graph()\n    graph2.parse(file2)  \n    vectors2 = extract_entity_vectors_rdf(graph=graph2, index=2)\n    os1 = {}\n    _alignements = {}\n    _g1_length = len(graph1)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "owl = Namespace(\"http://www.w3.org/2002/07/owl#\")\n# Charger le fichier texte\nwith open('./validations/agrold/reference.txt', 'r') as file:\n    for line in file:\n        # Diviser la ligne en deux colonnes (séparées par une tabulation)\n        columns = line.strip().split('\\t')\n        if len(columns) == 2:\n            sujet, objet = columns\n            # print(sujet, ' ----> ', objet)\n            # Créer des URI pour le sujet et l'objet",
+        "peekOfCode": "output_file = './outputs/agrold/tmp_same_as.ttl'\ntruth_file = './validations/agrold/valid_same_as.ttl'\ndef sigmoid(value):\n    return 1 / (1 + np.exp(value))\ndef cosine_sim(v1=[], v2=[]):\n    output = 0.0\n    dot = np.dot(v1, v2)\n    output = sigmoid(dot)\n    if output <= 0.10  :\n        # print(output)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "truth_file",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "truth_file = './validations/agrold/valid_same_as.ttl'\ndef sigmoid(value):\n    return 1 / (1 + np.exp(value))\ndef cosine_sim(v1=[], v2=[]):\n    output = 0.0\n    dot = np.dot(v1, v2)\n    output = sigmoid(dot)\n    if output <= 0.10  :\n        # print(output)\n        return True",
         "detail": "test",
         "documentation": {}
     }

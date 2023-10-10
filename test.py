@@ -1,134 +1,149 @@
-from rdflib import Graph, Namespace, URIRef, Literal
+import json
+from rdflib import Graph
+from deep_similarity import DeepSimilarity
+import numpy as np
+import random
+import validators
+from rdflib import Graph, URIRef, Namespace, Literal
+from rdflib.namespace import OWL
 
-# Créer un graphe RDF
-g = Graph()
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib import Graph, URIRef, Literal
+import networkx as nx
+from node2vec import Node2Vec
 
-# Espace de noms RDF et OWL
-rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
-owl = Namespace("http://www.w3.org/2002/07/owl#")
+from tqdm import tqdm
 
-# Charger le fichier texte
-with open('./validations/agrold/reference.txt', 'r') as file:
-    for line in file:
-        # Diviser la ligne en deux colonnes (séparées par une tabulation)
-        columns = line.strip().split('\t')
-        if len(columns) == 2:
-            sujet, objet = columns
-            # print(sujet, ' ----> ', objet)
-            # Créer des URI pour le sujet et l'objet
-            sujet_uri = URIRef(sujet)
-            objet_uri = URIRef(objet)
+# output_file = './outputs/doremus/tmp_same_as.ttl'
+# truth_file = './validations/doremus/valid_same_as.ttl'
 
-            # Ajouter un triplet RDF avec le prédicat owl:sameAs
-            g.add((sujet_uri, owl.sameAs, objet_uri))
+output_file = './outputs/agrold/tmp_same_as.ttl'
+truth_file = './validations/agrold/valid_same_as.ttl'
 
-# Écrire le graphe RDF dans un fichier RDF Turtle
-g.serialize(destination='./validations/agrold/output.ttl', format='turtle')
+def sigmoid(value):
+    return 1 / (1 + np.exp(value))
 
-print("Le fichier RDF a été généré avec succès.")
+def cosine_sim(v1=[], v2=[]):
+    output = 0.0
+    dot = np.dot(v1, v2)
+    output = sigmoid(dot)
+    if output <= 0.10  :
+        # print(output)
+        return True
+    return False
 
+def extract_entity_vectors_rdf(graph, index, embedding_dim=1000):
+    nx_graph = rdflib_to_networkx_multidigraph(graph)
 
-# import numpy as np
+    node2vec = Node2Vec(nx_graph, dimensions=64, walk_length=30, num_walks=20, workers=4)
 
-# # Supposons que votre matrice ressemble à ceci (c'est un exemple, adaptez-le à votre propre matrice) :
-# matrice = np.array([[(5, 10), (15, 8), (7, 21)],[(6, 11), (5, 9), (3, 8)]])
+    model = node2vec.fit(window=10, min_count=1, batch_words=4)  
 
-# # Utilisez la fonction numpy.min avec axis=0 pour obtenir la valeur minimale de la première position de chaque tuple.
-# #  for i in range(len(matrice[0]))
-# valeur_minimale1 = np.min([ np.mean(matrice[:, 0]) ])
-# valeur_minimale2 = np.min([ np.mean(matrice[:, 1]) ])
+    return model # model.wv['subject']
 
-# # Affichez la valeur minimale.
-# print("Valeur minimale de la première position :", valeur_minimale1, " valeur_minimale : ", valeur_minimale2)
+def calculate_alignment_metrics(output_file, truth_file):
+    output_graph = Graph()
+    output_graph.parse(output_file, format="turtle")
 
-# def ngram_similarity(str1, str2, N):
-#     # Fonction pour extraire les n-grammes d'une chaîne de caractères.
-#     def extract_ngrams(s, n):
-#         ngrams = []
-#         for i in range(len(s) - n + 1):
-#             ngram = s[i:i + n]
-#             ngrams.append(ngram)
-#         return ngrams
+    truth_graph = Graph()
+    truth_graph.parse(truth_file, format="turtle")
 
-#     # Extraction des n-grammes des deux chaînes.
-#     ngrams1 = extract_ngrams(str1, N)
-#     ngrams2 = extract_ngrams(str2, N)
+    found_alignments = set(output_graph.subjects())
+    true_alignments = set(truth_graph.subjects())
 
-#     # Calcul du nombre de n-grammes en commun.
-#     common_ngrams = set(ngrams1) & set(ngrams2)
+    intersection = len(found_alignments.intersection(true_alignments))
+    precision = intersection / len(found_alignments) if len(found_alignments) > 0 else 0.0
+    recall = intersection / len(true_alignments) if len(true_alignments) > 0 else 0.0
+    f_measure = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
 
-#     # Calcul de la similarité N-gram.
-#     similarity = len(common_ngrams) / max(len(ngrams1), len(ngrams2))
-#     similarity2 = len(common_ngrams) / (min(len(ngrams1), len(ngrams2)) - N + 1)
-#     print('sim 2 : ', similarity2)
-#     return similarity
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f_measure": f_measure
+    }
 
-# # Exemple d'utilisation :
-# chaine1 = "bonjour"
-# chaine2 = "bonsoir"
-# N = 2
-# similarity = ngram_similarity(chaine1, chaine2, N)
-# print("Similarité N-gram :", similarity)
+def create_and_save_rdf_from_dict(input_dict, output_file):
+    graph = Graph()
+    # owl = Namespace("http://www.w3.org/2002/07/owl#")
+    for source, target in input_dict.items():
+        source_uri = URIRef(source)
+        target_uri = URIRef(target)
+        graph.add((source_uri, OWL.sameAs, target_uri))
+    graph.serialize(destination=output_file, format="turtle")
 
+def random_choice(value='', data=[], n = 500):
+    ds = DeepSimilarity(code='*')
+    score = 0.0
+    _object = ''
+    _data = random.choices(data, k=n)
+    values = [ ds.jaro_similarity(value1=value, value2=d)  for d in _data ]
+    score = max(values)
+    index = values.index(score)
+    _object = _data[index]
+    return score, _object
 
-# def jaro_similarity(str1, str2):
-#     # Fonction pour calculer la distance de Jaro-Winkler
-#     def jaro_winkler_distance(s1, s2):
-#         # Longueur des chaînes
-#         len_s1 = len(s1)
-#         len_s2 = len(s2)
+def process_rdf_files(file1, file2):
+    graph1 = Graph()
+    graph1.parse(file1)
+    vectors1 = extract_entity_vectors_rdf(graph=graph1, index=1)
 
-#         # Longueur maximale pour la fenêtre de correspondance
-#         max_len = max(len_s1, len_s2)
+    graph2 = Graph()
+    graph2.parse(file2)  
+    vectors2 = extract_entity_vectors_rdf(graph=graph2, index=2)
 
-#         # Rayon de correspondance (distance maximale pour une correspondance)
-#         match_distance = (max_len // 2) - 1
+    os1 = {}
+    _alignements = {}
 
-#         # Marqueurs de correspondance
-#         s1_matches = [False] * len_s1
-#         s2_matches = [False] * len_s2
+    _g1_length = len(graph1)
+    _g2_length = len(graph2)
+    _graph1 = graph1 if  _g1_length >= _g2_length else graph2
+    _graph2 = graph2 if  _g1_length >= _g2_length else graph1
+    rand_count = int(( _g1_length if  _g1_length >= _g2_length else _g2_length ) * 0.08)
+    for s1, p1, o1 in tqdm(_graph1):
+        _o1 = str(o1)
+        _s1 = str(s1)
+        if not validators.url(_o1) :
+            if not _o1 in os1 : 
+                os1[_o1] = set()
+            os1[_o1].add(_s1)
 
-#         # Nombre de correspondances
-#         matches = 0
+    objects1 = list(os1.keys())
+    for s2, p2, o2 in tqdm(_graph2) :
+        _o2 = str(o2)
+        _s2 = str(s2)
+        if not validators.url(_o2) :
+            score, object1 = random_choice(value=_o2, data=objects1, n=rand_count)
+            sub_s1 = os1[object1]
+            for s1 in sub_s1:
+                _s1 = str(s1)
+                subpair = _s1 + "@" + _s2
+                if _s1 in vectors1.wv and _s2 in vectors2.wv and cosine_sim(v1=vectors1.wv[_s1], v2=vectors2.wv[_s2]) : 
+                    if not subpair in _alignements :
+                        _alignements[subpair] = 0
+                    _alignements[subpair] += 1
+    # print(json.dumps(keys_candidates, indent=4))
+    print(' \n \n ')
+    tmp = {}
+    count = 0
+    for key in _alignements:
+        _tmp = _alignements[key]
+        if _tmp >= 1 : 
+            parts = key.split('@')
+            tmp[parts[0]] = parts[1]
+            count+=1
+    # print(json.dumps(tmp, indent=4))
+    print(f'They are {len(list(tmp.keys()))} in all')
+    create_and_save_rdf_from_dict(tmp, output_file)
+    metrics = calculate_alignment_metrics(output_file, truth_file)
+    print("Precision : ", metrics["precision"])
+    print("Recall : ", metrics["recall"])
+    print("F-measure : ", metrics["f_measure"])
 
-#         # Compter les correspondances
-#         for i in range(len_s1):
-#             start = max(0, i - match_distance)
-#             end = min(i + match_distance + 1, len_s2)
+if __name__ == "__main__":
 
-#             for j in range(start, end):
-#                 if not s2_matches[j] and s1[i] == s2[j]:
-#                     s1_matches[i] = True
-#                     s2_matches[j] = True
-#                     matches += 1
-#                     break
+    # file1 = "./inputs/doremus/source.ttl"
+    # file2 = "./inputs/doremus/target.ttl"
 
-#         if matches == 0:
-#             return 0.0
-
-#         # Compter les transpositions
-#         transpositions = 0
-#         k = 0
-#         for i in range(len_s1):
-#             if s1_matches[i]:
-#                 while not s2_matches[k]:
-#                     k += 1
-#                 if s1[i] != s2[k]:
-#                     transpositions += 1
-#                 k += 1
-
-#         # Calculer la similarité de Jaro
-#         jaro_similarity = (matches / len_s1 + matches / len_s2 + (matches - transpositions / 2) / matches) / 3.0
-
-#         return jaro_similarity
-
-#     # Calculer la distance de Jaro-Winkler
-#     jaro_distance = 1.0 - jaro_winkler_distance(str1, str2)
-
-#     return jaro_distance
-
-# Exemple d'utilisation :
-# chaine1 = "martha"
-# chaine2 = "marhta"
-# similarity = jaro_similarity(chaine1, chaine2)
-# print("Similarité de Jaro :", similarity)
+    file1 = "./inputs/agrold/source.nt"
+    file2 = "./inputs/agrold/target.nt"
+    process_rdf_files(file1, file2)

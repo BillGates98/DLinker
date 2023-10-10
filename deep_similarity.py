@@ -125,16 +125,18 @@ class DeepSimilarity:
         final = (sim + abs(_lvalue1 - _lvalue2) ) / max(_lvalue1, _lvalue2)
         return final
 
-    def comparison_run(self, first='', second='', alpha=0, level=1):
+    def comparison_run(self, first='', second='', alpha=0, level=0):
         _first_value = StringUtils().get_uri_last_part(value = first)
         _second_value = StringUtils().get_uri_last_part(value = second)
-        output0 = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha, level=level) 
+        # output0 = self.measure1_(value1=_first_value, value2=_second_value, alpha=alpha, level=level) 
         # print('\n Comparison : ', _first_value, ' And ' , _second_value )
-        # output1 = self.substringsim(value1=_first_value, value2=_second_value) 
-        # output2 = self.hamming(value1=_first_value, value2=_second_value) 
-        # output3 = self.jaro_similarity(value1=_first_value, value2=_second_value) 
-        # vals = [output1, output2, output3]
-        if output0 >= alpha :
+        _, output1 = self._substringsim(value1=_first_value, value2=_second_value) 
+        # output3 = self.hamming(value1=_first_value, value2=_second_value) 
+        # output2 = self.jaro_similarity(value1=_first_value, value2=_second_value) 
+        # vals = [output1, output2, output3] 
+        if output1 >= alpha :
+            # print(output1)
+            # print(output3, ' => ', output2, ' => ', abs(output3-output2))
             return True
         # print('lcs : ', output1, ' hamming : ', output2, ' jaro similarity : ', output3)
         return False # output2 and output3
@@ -148,7 +150,9 @@ class DeepSimilarity:
         val_len1 = len(value1)
         val_len2 =  len(value2)
         score = 2 * len(common_string) / (val_len1 + val_len2)
-        return score
+        # print('Score : ', score)
+        # print('c : ', len(common_string), ' l1 : ', val_len1, ' l2 : ', val_len2)
+        return common_string, score
     
     def _hamming(self, value1='', value2=''):
         _lvalue1 = len(value1)
@@ -163,6 +167,6 @@ class DeepSimilarity:
         _first_value = StringUtils().get_uri_last_part(value = first)
         _second_value = StringUtils().get_uri_last_part(value = second)
         output1 = self._substringsim(value1=_first_value, value2=_second_value) 
-        output2 = self._hamming(value1=_first_value, value2=_second_value) 
-        return (output1, output2)
+        # output2 = self._hamming(value1=_first_value, value2=_second_value) 
+        return output1 #, output2)
 

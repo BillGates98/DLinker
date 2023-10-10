@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+
+    <script>
+        function closestTime() {
+            let times = [];
+            for(var h=0; h < 24; h++) {
+                for(var m=0; m < 59; m = m + 15) {
+                    times.push(new Date(0, 0, 0, h, m))
+                }
+            }
+            // console.log('Length ', times.length )
+            let now = new Date();
+            let currentTime = now.getHours() * 60 + now.getMinutes();
+            let minutesTimes = times.map(function (time) {
+                return time.getHours() * 60 + time.getMinutes();
+            });
+            let closestTime = minutesTimes.reduce(function (previousTime, currentTime) {
+                return Math.abs(currentTime - currentTime) < Math.abs(previousTime - currentTime) ? currentTime : previousTime;
+            });
+            now.setHours(Math.floor(closestTime / 60), closestTime % 60, 0, 0);
+            hour = now.getUTCHours()
+            hour = hour < 10 ? '0' + hour : hour
+            minute = now.getUTCMinutes()
+            minute = minute < 10 ? '0' + minute : minute
+            return hour + ':' + minute;
+        }
+        let closest = closestTime();
+        console.log("Closest time:", closest);
+
+    </script>
+</body>
+
+</html>
+
+
+function scrollToElement(elementId) {
+    var element = document.getElementById(elementId);
+    
+    if (element) {
+        var list = document.getElementById('votreListeId');
+        var offsetTop = element.offsetTop;
+        
+        list.scrollTop = offsetTop;
+    }
+}
