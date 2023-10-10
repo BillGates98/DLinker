@@ -12,7 +12,7 @@ from rdflib import Graph, URIRef, Literal
 import networkx as nx
 from node2vec import Node2Vec
 
-from tqdm import tqdm
+from tqdm import tqdm 
 
 # output_file = './outputs/doremus/tmp_same_as.ttl'
 # truth_file = './validations/doremus/valid_same_as.ttl'
