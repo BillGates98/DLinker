@@ -1,4 +1,5 @@
 import json
+import log
 from rdflib import Graph
 from deep_similarity import DeepSimilarity
 import numpy as np
@@ -11,35 +12,74 @@ from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from rdflib import Graph, URIRef, Literal
 import networkx as nx
 from node2vec import Node2Vec
-
+from collections import Counter
 from tqdm import tqdm 
+import time
+import re
+from pyjarowinkler import distance
+import string
+import multiprocessing
+import itertools
 
-# output_file = './outputs/doremus/tmp_same_as.ttl'
-# truth_file = './validations/doremus/valid_same_as.ttl'
+# import nltk
+# from nltk.corpus import stopwords
+# nltk.download('stopwords') 
 
-output_file = './outputs/agrold/tmp_same_as.ttl'
-truth_file = './validations/agrold/valid_same_as.ttl'
+
+
+start_time = time.time()
+
+output_files = [
+    './outputs/anatomy/tmp_same_as.ttl',
+    './outputs/doremus/tmp_same_as.ttl',
+    './outputs/agrold/tmp_same_as.ttl',
+    './outputs/SPIMBENCH_small-2016/tmp_same_as.ttl',
+    './outputs/spaten_hobbit/tmp_same_as.ttl'
+]
+truth_files = [
+    './validations/anatomy/valid_same_as.ttl',
+    './validations/doremus/valid_same_as.ttl',
+    './validations/agrold/valid_same_as.ttl',
+    './validations/SPIMBENCH_small-2016/valid_same_as.ttl',
+    './validations/spaten_hobbit/valid_same_as.ttl'
+]
+
+index = 1
+output_file = output_files[index]
+truth_file = truth_files[index]
+
+
+
+vocabulary = dict()
+synonyms = dict()
+
+word_counts = Counter()
+
+ds = DeepSimilarity(code='*')
+
+output_alignements = {}
 
 def sigmoid(value):
-    return 1 / (1 + np.exp(value))
+    return 1 / (1 + np.exp(-value))
 
-def cosine_sim(v1=[], v2=[]):
-    output = 0.0
-    dot = np.dot(v1, v2)
-    output = sigmoid(dot)
-    if output <= 0.10  :
-        # print(output)
-        return True
+def sim(entity1=[], entity2=[]):
+    jaros = []
+    for p1, o1 in entity1:
+        if not validators.url(o1) :
+            for p2, o2 in entity2:
+                if not validators.url(o2) :
+                    jaro_sim = round(ds.jaro_similarity(value1=o1, value2=o2), 2)
+                    if jaro_sim > 0:
+                        jaros.append(jaro_sim)
+    if len(jaros) > 0 :
+        decision = np.mean(np.array(jaros))
+        if decision >= 0.3 :
+            return True
     return False
-
-def extract_entity_vectors_rdf(graph, index, embedding_dim=1000):
-    nx_graph = rdflib_to_networkx_multidigraph(graph)
-
-    node2vec = Node2Vec(nx_graph, dimensions=64, walk_length=30, num_walks=20, workers=4)
-
-    model = node2vec.fit(window=10, min_count=1, batch_words=4)  
-
-    return model # model.wv['subject']
+    
+def clean_sentence(sentence):
+    cleaned_sentence = ''.join(char for char in sentence if char not in string.punctuation)
+    return cleaned_sentence.lower()
 
 def calculate_alignment_metrics(output_file, truth_file):
     output_graph = Graph()
@@ -50,7 +90,7 @@ def calculate_alignment_metrics(output_file, truth_file):
 
     found_alignments = set(output_graph.subjects())
     true_alignments = set(truth_graph.subjects())
-
+    print('Count of true alignments : ', len(true_alignments))
     intersection = len(found_alignments.intersection(true_alignments))
     precision = intersection / len(found_alignments) if len(found_alignments) > 0 else 0.0
     recall = intersection / len(true_alignments) if len(true_alignments) > 0 else 0.0
@@ -71,79 +111,173 @@ def create_and_save_rdf_from_dict(input_dict, output_file):
         graph.add((source_uri, OWL.sameAs, target_uri))
     graph.serialize(destination=output_file, format="turtle")
 
-def random_choice(value='', data=[], n = 500):
-    ds = DeepSimilarity(code='*')
-    score = 0.0
-    _object = ''
-    _data = random.choices(data, k=n)
-    values = [ ds.jaro_similarity(value1=value, value2=d)  for d in _data ]
-    score = max(values)
-    index = values.index(score)
-    _object = _data[index]
-    return score, _object
+def get_rdf_objects(rdf_graph):
+    objects = list(rdf_graph.objects())
+    return objects
+
+def valeur_minimum_frequence(liste):
+    frequence = Counter(liste)
+    min_frequence = min(frequence.values())
+    valeurs_min_frequent = [element for element, freq in frequence.items() if freq >= min_frequence]
+    return valeurs_min_frequent
+
+def get_rdf_triples(rdf_graph):
+    output = {}
+    objects = {}
+    for s, p, o in tqdm(rdf_graph):
+        s = str(s)
+        p = str(p)
+        o = str(o)
+        if not s in output :
+            output[s] = []
+        
+        if not o in objects :
+            objects[o] = 0
+
+        objects[o] += 1
+        output[s].append((p, o))    
+    return output, objects
+
+def predicate_objects(objects1={}, objects2={}):
+    output = {}
+    min1 = min(valeur_minimum_frequence(list(objects1.values())))
+    min2 = min(valeur_minimum_frequence(list(objects2.values())))
+    gmin = min(min1, min2)
+    for obj in tqdm(objects1) :
+        if obj in objects2 :
+            a = objects1[obj]
+            b = objects2[obj] 
+            _min = min(a, b)
+            prob = _min / max(a,b)
+            if _min >= gmin and prob >= 0.5 : #  
+                output[obj] = {'s': objects1[obj], 't': objects2[obj], 'probability': prob}
+    return  output
+
+def reduce_entities(subjects, candidatures, entry='s'):
+    tmp = {}
+    output = {}
+    assoc = {'s': 't', 't': 's'}
+    sums = []
+    for s in tqdm(subjects):
+        _triples = subjects[s]
+        _sum = 0.0
+        for p , o in _triples :
+            if o in candidatures :
+                _sum = _sum + ( (1/candidatures[o][entry]) * candidatures[o][assoc[entry]] )
+                sums.append(round(_sum,0))
+                tmp[s] = _sum
+    # v = int(np.mean(valeur_minimum_frequence(sums)))
+    v = int(np.mean(sums))
+    print(' v : ', v )
+    # if v < 4 :
+    #     _randed = random.choices(list(tmp.keys()), k=4500)
+    #     for s in _randed :
+    #         output[s] = subjects[s]
+    # else : 
+    for s in tmp:
+        _sum = tmp[s]
+        if _sum > 4 : # critic # agroLD 2 # doremus 4 # spim : 11
+            output[s] = subjects[s]
+    # print(output)
+    return output
+
+def random_selections(data=[], k=0):
+    _randed = random.choices(data, k=k)
+    return _randed
+
+
+# End of embedding functions
+#
+
+def parallel_running(sub1, sub2, subs1, subs2):
+    if sim(entity1=subs1[sub1], entity2=subs2[sub2]):
+        return sub1, sub2
+    return None, None
+
+def random_selection(data1=[], data2=[], k=0.1):
+    pairs = []
+    print('Pairs selection ... ', int(len(data1)*k))
+
+    tmp = [i for i in range(len(data1))]
+    for entity2 in data2:
+        for _ in range(int(len(data1)*k)):
+            entity1 = data1[random.choice(tmp)]
+            pairs.append((entity1, entity2))
+    return pairs
 
 def process_rdf_files(file1, file2):
+    
     graph1 = Graph()
     graph1.parse(file1)
-    vectors1 = extract_entity_vectors_rdf(graph=graph1, index=1)
-
+    print('Source file loaded ..100%')
     graph2 = Graph()
     graph2.parse(file2)  
-    vectors2 = extract_entity_vectors_rdf(graph=graph2, index=2)
+    print('Target file loaded ..100%')
 
-    os1 = {}
-    _alignements = {}
+    graph3 = Graph()
+    graph3.parse(truth_file)  
+    print('Truth file loaded ..100%')
 
-    _g1_length = len(graph1)
-    _g2_length = len(graph2)
-    _graph1 = graph1 if  _g1_length >= _g2_length else graph2
-    _graph2 = graph2 if  _g1_length >= _g2_length else graph1
-    rand_count = int(( _g1_length if  _g1_length >= _g2_length else _g2_length ) * 0.08)
-    for s1, p1, o1 in tqdm(_graph1):
-        _o1 = str(o1)
-        _s1 = str(s1)
-        if not validators.url(_o1) :
-            if not _o1 in os1 : 
-                os1[_o1] = set()
-            os1[_o1].add(_s1)
+    print('Graph1 Subjects\'s and Objects\' list are building ..0%')
+    subjects1, objects1 = get_rdf_triples(graph1)
+    print('Graph2 Subjects\'s and Objects\' list are building ..0%')
+    subjects2, objects2 = get_rdf_triples(graph2)
+    print('Building ended')
 
-    objects1 = list(os1.keys())
-    for s2, p2, o2 in tqdm(_graph2) :
-        _o2 = str(o2)
-        _s2 = str(s2)
-        if not validators.url(_o2) :
-            score, object1 = random_choice(value=_o2, data=objects1, n=rand_count)
-            sub_s1 = os1[object1]
-            for s1 in sub_s1:
-                _s1 = str(s1)
-                subpair = _s1 + "@" + _s2
-                if _s1 in vectors1.wv and _s2 in vectors2.wv and cosine_sim(v1=vectors1.wv[_s1], v2=vectors2.wv[_s2]) : 
-                    if not subpair in _alignements :
-                        _alignements[subpair] = 0
-                    _alignements[subpair] += 1
-    # print(json.dumps(keys_candidates, indent=4))
-    print(' \n \n ')
-    tmp = {}
-    count = 0
-    for key in _alignements:
-        _tmp = _alignements[key]
-        if _tmp >= 1 : 
-            parts = key.split('@')
-            tmp[parts[0]] = parts[1]
-            count+=1
-    # print(json.dumps(tmp, indent=4))
-    print(f'They are {len(list(tmp.keys()))} in all')
-    create_and_save_rdf_from_dict(tmp, output_file)
+    print(' Candidatures building')
+    candidatures = predicate_objects(objects1, objects2)
+    # print(candidatures)
+    # exit()
+    print('Candidates reducing ')
+    print( len(list(subjects1.keys())) )
+    print( len(list(subjects2.keys())) )
+    subjects1 = reduce_entities(subjects1, candidatures, entry='s')
+    subjects2 = reduce_entities(subjects2, candidatures, entry='t')
+    print( len(list(subjects1.keys())) )
+    print( len(list(subjects2.keys())) )
+    # exit
+    # for s, _, t in graph3:
+    #     if sim(entity1=subjects1[str(s)], entity2=subjects2[str(t)]):
+    #         output_alignements[str(s)] = str(t)
+    exit()
+    pairs = random_selection(data1=list(subjects1.keys()), data2=list(subjects2.keys()), k=1.0) # important agroLD : 0.001
+    print(f'{len(pairs)} pairs ')
+    with multiprocessing.Pool(processes=10) as pool:
+        results = pool.starmap(parallel_running, [ (sub1, sub2, subjects1, subjects2) for sub1, sub2 in tqdm(pairs)] )
+        # print(results)
+        for sub1, sub2 in results :
+            if sub1 != None and sub2 != None :
+                output_alignements[sub1] = sub2
+
+    print(f' \nThey are {len(list(output_alignements.keys()))} in all')
+    create_and_save_rdf_from_dict(output_alignements, output_file)
     metrics = calculate_alignment_metrics(output_file, truth_file)
     print("Precision : ", metrics["precision"])
     print("Recall : ", metrics["recall"])
     print("F-measure : ", metrics["f_measure"])
 
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f" \n Running time : {execution_time} seconds")
+
 if __name__ == "__main__":
 
-    # file1 = "./inputs/doremus/source.ttl"
-    # file2 = "./inputs/doremus/target.ttl"
+    files1 = [
+        './inputs/anatomy/source.owl',
+        './inputs/doremus/source.ttl',
+        './inputs/agrold/source.nt',
+        './inputs/SPIMBENCH_small-2016/source.nt',
+        './inputs/spaten_hobbit/source.nt'
+    ]
 
-    file1 = "./inputs/agrold/source.nt"
-    file2 = "./inputs/agrold/target.nt"
+    files2 = [
+        './inputs/anatomy/target.owl',
+        './inputs/doremus/source.ttl',
+        './inputs/agrold/target.nt',
+        './inputs/SPIMBENCH_small-2016/target.nt',
+        './inputs/spaten_hobbit/target.nt'
+    ]
+
+    file1 = files1[index]
+    file2 = files2[index]
     process_rdf_files(file1, file2)
